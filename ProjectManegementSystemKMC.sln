@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Manegement System - KMC", "Project Manegement System - KMC\Project Manegement System - KMC.csproj", "{BF963E29-7375-492D-8652-360E5A07607E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Manegement System KMC Water", "Project Manegement System KMC Water\Project Manegement System KMC Water.csproj", "{2964D7CE-A427-427C-9EFF-76F069C7CE8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF963E29-7375-492D-8652-360E5A07607E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF963E29-7375-492D-8652-360E5A07607E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF963E29-7375-492D-8652-360E5A07607E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF963E29-7375-492D-8652-360E5A07607E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2964D7CE-A427-427C-9EFF-76F069C7CE8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2964D7CE-A427-427C-9EFF-76F069C7CE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2964D7CE-A427-427C-9EFF-76F069C7CE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2964D7CE-A427-427C-9EFF-76F069C7CE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C25D6102-F18F-43AF-A805-0AF3A6FB2B20}
+	EndGlobalSection
+EndGlobal
