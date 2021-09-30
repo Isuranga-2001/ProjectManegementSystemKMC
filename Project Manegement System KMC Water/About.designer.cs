@@ -244,7 +244,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(141, 45);
             this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "v1.1.6.3";
+            this.guna2Button1.Text = "v1.0.0.0";
             // 
             // DragControl
             // 
@@ -267,7 +267,7 @@ namespace Project_Manegement_System_KMC_Water
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

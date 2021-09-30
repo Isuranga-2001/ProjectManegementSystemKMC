@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.IO;
+using System.Diagnostics;
 
 namespace Project_Manegement_System_KMC_Water
 {
@@ -26,6 +28,8 @@ namespace Project_Manegement_System_KMC_Water
         bool ChartDataShowAsAverage = true;
         int StartMonth = -12;
 
+        List<string> XValueList = new List<string>();
+
         private void WaterDiscribution_Load(object sender, EventArgs e)
         {
             PanelAvailableChartSeries.Visible = ListBoxSearchResults.Visible = false;
@@ -42,11 +46,14 @@ namespace Project_Manegement_System_KMC_Water
         {
             ChartProductionHistory.Series[0].Points.Clear();
             ChartProductionHistory.Series[1].Points.Clear();
-            
+            XValueList = new List<string> { };
+
             List<string> VariationProductionCapacity;
 
             for (int j = StartMonth; j < 0; j++)
             {
+                XValueList.Add(DateTime.Today.AddMonths(j).Year.ToString() + "-" + DateTime.Today.AddMonths(j).Month.ToString());
+
                 // Draw Production Series
 
                 VariationProductionCapacity = sqlFunctions.SQLRead(
@@ -117,7 +124,7 @@ namespace Project_Manegement_System_KMC_Water
                 {
                     ChartProductionHistory.Series[SeriesID].Points.AddXY(
                         DateTime.Today.AddMonths(j).Year.ToString() +
-                        "-" + DateTime.Today.AddMonths(j).Month.ToString(), 0);
+                        "-" + DateTime.Today.AddMonths(j).Month.ToString(), 1);
                 }
             }
         }
@@ -274,6 +281,9 @@ namespace Project_Manegement_System_KMC_Water
                 ChartAreaViseConsumption.Series[AreaName].MarkerStyle = MarkerStyle.Circle;
                 ChartAreaViseConsumption.Series[AreaName].ToolTip = AreaName;
 
+                if (ChartAreaViseConsumption.Series.Count == 1 && pagedControl1.SelectedPage == page2)
+                    XValueList = new List<string> { };
+
                 List<string> VariationProductionCapacity;
 
                 string AreaID = sqlFunctions.SQLRead("SELECT AreaID FROM Area " +
@@ -281,6 +291,9 @@ namespace Project_Manegement_System_KMC_Water
 
                 for (int j = StartMonth; j < 0; j++)
                 {
+                    if (ChartAreaViseConsumption.Series.Count == 1 && pagedControl1.SelectedPage == page2)
+                        XValueList.Add(DateTime.Today.AddMonths(j).Year.ToString() + "-" + DateTime.Today.AddMonths(j).Month.ToString());
+
                     VariationProductionCapacity = sqlFunctions.SQLRead("SELECT Capacity FROM Consumption " +
                         "WHERE AreaID='" + AreaID + "' AND Month='" + DateTime.Today.AddMonths(j).Year + "-" +
                         DateTime.Today.AddMonths(j).Month + "'", "Capacity");
@@ -304,6 +317,7 @@ namespace Project_Manegement_System_KMC_Water
                                     DateTime.Today.AddMonths(j).Month.ToString(),
                                     Convert.ToDouble(VariationProductionCapacity[0].Trim()));
                             }
+
                             continue;
                         }
                     }
@@ -379,6 +393,106 @@ namespace Project_Manegement_System_KMC_Water
             {
                 ResetAreaViseConsumptionChart();
             }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (pagedControl1.SelectedPage == page1)
+                ExportData(ChartProductionHistory);
+            else
+                ExportData(ChartAreaViseConsumption);
+        }
+
+        void ExportData(Chart SelectedChart)
+        {
+            if (SelectedChart.Series.Count > 0)
+            {
+                // create save file
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "CSV (*.csv)|*.csv";
+
+                if (SelectedChart.Name == ChartProductionHistory.Name)
+                {
+                    string DataType = "Total";
+                    if (ChartDataShowAsAverage)
+                        DataType = "Avarage";
+
+                    sfd.FileName = DataType + " Production And Consumption Capacity From " + XValueList[0]
+                        + " To " + XValueList[XValueList.Count - 1] + " .csv";
+                }
+                else
+                {
+                    sfd.FileName = "Area Wise Consumption Capacity From " + XValueList[0]
+                        + " To " + XValueList[XValueList.Count - 1] + " .csv";
+                }
+
+                bool fileError = false;
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("It wasn't possible to write the data to the disk." +
+                                ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            string[] outputCsv = new string[SelectedChart.Series[0].Points.Count + 1];
+
+                            outputCsv[0] += "Date,";
+                            for (int i = 0; i < SelectedChart.Series.Count; i++)
+                            {
+                                outputCsv[0] += SelectedChart.Series[i].Name + ",";
+                            }
+
+                            for (int i = 0; i < SelectedChart.Series[0].Points.Count; i++) 
+                            {
+                                outputCsv[i + 1] += XValueList[i] + ",";
+
+                                for (int j = 0; j < SelectedChart.Series.Count; j++)
+                                {
+                                    if (SelectedChart.Series[j].Points[i].YValues[0] != 1d) 
+                                        outputCsv[i + 1] += SelectedChart.Series[j].Points[i].YValues[0] + ",";
+                                    else
+                                        outputCsv[i + 1] += "N/A,";
+                                }
+                            }
+
+                            File.WriteAllLines(sfd.FileName, outputCsv, Encoding.UTF8);
+
+                            if (MessageBox.Show("Data exported successfully. Do you want to open it?", "Successfully Exported",
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                Process.Start(sfd.FileName);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error :" + ex.Message, "Error", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Record To Export!, Chart Is Empty", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            multiFunctions.NavigateTo(btnClose.Tag.ToString(), this);
         }
     }
 }

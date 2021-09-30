@@ -472,5 +472,16 @@ namespace Project_Manegement_System_KMC_Water
                 CreateChartProductionCostAndConsumptionIncome();
             }
         }
+
+        private void btnNavigation_Click(object sender, EventArgs e)
+        {
+            Guna2CircleButton btnNavigation = (Guna2CircleButton)sender;
+            multiFunctions.NavigateTo(btnNavigation.Tag.ToString(), this);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            multiFunctions.NavigateTo(btnClose.Tag.ToString(), this);
+        }
     }
 }

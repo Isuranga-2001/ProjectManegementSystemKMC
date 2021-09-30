@@ -30,8 +30,9 @@ namespace Project_Manegement_System_KMC_Water
             "PH", "EC", "TDS", "Tur", "DO", "Al", "Fe", "RCI", "Colour", "Temp" 
         };
 
-        int SelectedColumn = 0;
+        int SelectedColumn = 0, SelectedRow = 0;
         string SelectedDataSet = null, SavedFilePath = "";
+        bool PrecentageMarkVisible = false;
 
         private void Filter_Load(object sender, EventArgs e)
         {
@@ -124,11 +125,6 @@ namespace Project_Manegement_System_KMC_Water
             catch { }
         }
 
-        private void BtnClose_Click(object sender, EventArgs e)
-        {
-            multiFunctions.SignOut(this);
-        }
-
         private void NavigationBarButton_Click(object sender, EventArgs e)
         {
             Guna2CircleButton NavigationBarButton = (Guna2CircleButton)sender;
@@ -176,8 +172,7 @@ namespace Project_Manegement_System_KMC_Water
                         {
                             SelectedSectionColumnNameList = new List<string>
                             {
-                                "Area","Related Month","Monthly Consumption Capacity","Consumption Income",
-                                "Monthly Produced Capacity","Monthly Production Cost"
+                                "Area","Related Month","Monthly Consumption Capacity","Consumption Income"
                             };
                             break;
                         }
@@ -238,8 +233,7 @@ namespace Project_Manegement_System_KMC_Water
                         SimilarColumnHeaderForDatabaseColumnName = new Dictionary<string, string>
                         {
                             { "Related Month","Month" },{ "Monthly Consumption Capacity","Capacity" },
-                            { "Consumption Income","MonthAmount" },{ "Area","LocationName" },
-                            { "Monthly Produced Capacity","ProductionCapacity" },{ "Monthly Production Cost","Cost" }
+                            { "Consumption Income","MonthAmount" },{ "Area","LocationName" }
                         };
                         break;
                     }
@@ -335,6 +329,34 @@ namespace Project_Manegement_System_KMC_Water
             {
                 if (SelectedDataSet == "Project")
                 {
+                    if (!CustomFilters.ToggleSwitchProgressHistory.Checked && CustomFilters.btnSelectedProgressStatusNotStarted.Checked)
+                    {
+                        List<string> LastProgressOfProjects = sqlFunctions.SQLRead("SELECT ProjectID,MAX(Progress) AS Progress FROM ProgressOfProject GROUP BY ProjectID", "ProjectID Progress");
+                        Dictionary<string, string> LastProgressOfProjectsDictionary = new Dictionary<string, string> { };
+
+                        if (LastProgressOfProjects != null)
+                        {
+                            for (int i = 0; i < LastProgressOfProjects.Count; i += 2)
+                            {
+                                LastProgressOfProjectsDictionary.Add(LastProgressOfProjects[i], LastProgressOfProjects[i + 1]);
+                            }
+
+                            if (LastProgressOfProjectsDictionary.Count > 0)
+                            {
+                                DataRow dataRow;
+                                for (int i = 0; i < SelectionDataTable.Rows.Count; i++)
+                                {
+                                    dataRow = SelectionDataTable.Rows[i];
+                                    if (dataRow.ItemArray[6].ToString() != LastProgressOfProjectsDictionary[dataRow.ItemArray[0].ToString()])
+                                    {
+                                        SelectionDataTable.Rows.Remove(dataRow);
+                                        i -= 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     int EHStartColumnIndex;
                     if (CustomFilters.ToggleSwitchProgressHistory.Checked)
                         EHStartColumnIndex = 11;
@@ -530,6 +552,7 @@ namespace Project_Manegement_System_KMC_Water
             CreateResultSheet(null);
             CustomFilters = new FilterCustomization();
             pagedControl1.SelectedPage = page2;
+            ResetTranslateMenuItems();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -729,6 +752,12 @@ namespace Project_Manegement_System_KMC_Water
                         }
 
                         ConditionField = String.Format("(ProgressOfProject.Progress<={0} AND ProgressOfProject.Progress>={1})", UpRange, DownRange);
+
+                        if (UpRange==100 && DownRange == 0)
+                        {
+                            ConditionField = "(ProgressOfProject.Progress=100 OR ProgressOfProject.Progress=0)";
+                        }
+
                         ConditionParts.Add(ConditionField);
                     }   
                 }
@@ -785,45 +814,290 @@ namespace Project_Manegement_System_KMC_Water
                 {
                     CreateResultSheet(null);
                 }
-
+                
                 // Filter by Date (StartDate Or ProductionDate)
 
                 if (SelectedDataSet == "Project")
                 {
                     if (!CustomFilters.ToggleSwitchStartDateAll.Checked)
                     {
-                        if (CustomFilters.SelectedMinimumStartDate < CustomFilters.SelectedMaximumStartDate)
-                        {/*
-                            DateTimePicker DateTimeCheck = new DateTimePicker();
-                            string[] StartDate;
-
-                            foreach(DataGridViewRow TableResultsRow in TableResults.Rows)
-                            {
-                                StartDate = TableResultsRow.Cells["StartDate"].Value.ToString().Split('-');
-                                DateTimeCheck.Value. = Convert.ToInt32(StartDate[0]);
-
-                            }*/
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Something went wrong! Can't Filter Start Date", "Input Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        FilterByDate("StartDate");
                     }
                 }
                 else if (SelectedDataSet == "Production")
                 {
-
+                    if (!CustomFilters.ToggleSwitchProductionDateAll.Checked)
+                    {
+                        FilterByDate("Date");
+                    }
                 }
             }
         }
 
-        private void TableResults_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        void FilterByDate(string Field)
         {
-            if (TableResults.Columns[e.ColumnIndex].Name == "ProjectID")
+            if (CustomFilters.SelectedMinimumDate < CustomFilters.SelectedMaximumDate)
             {
+                DateTime SelectedMinimumDate = CustomFilters.SelectedMinimumDate;
+                DateTime SelectedMaximumDate = CustomFilters.SelectedMaximumDate;
+                DataGridViewCell DataCell;
+                string[] DateParts;
+                List<DataGridViewRow> DataRowsToDelete = new List<DataGridViewRow> { };
 
+                for (int i = 0; i < TableResults.Rows.Count - 1; i++)
+                {
+                    DataCell = TableResults.Rows[i].Cells[Field];
+
+                    DateParts = DataCell.Value.ToString().Trim().Split('-');
+
+                    if (Convert.ToInt32(DateParts[0]) <= SelectedMaximumDate.Year &&
+                        Convert.ToInt32(DateParts[0]) >= SelectedMinimumDate.Year)
+                    {
+                        if (Convert.ToInt32(DateParts[1]) <= SelectedMaximumDate.Month &&
+                            Convert.ToInt32(DateParts[1]) >= SelectedMinimumDate.Month)
+                        {
+                            if (Convert.ToInt32(DateParts[2]) <= SelectedMaximumDate.Day &&
+                                Convert.ToInt32(DateParts[2]) >= SelectedMinimumDate.Day ||
+                                Convert.ToInt32(DateParts[1]) == SelectedMinimumDate.Month &&
+                                Convert.ToInt32(DateParts[2]) >= SelectedMinimumDate.Day ||
+                                Convert.ToInt32(DateParts[1]) == SelectedMaximumDate.Month &&
+                                Convert.ToInt32(DateParts[2]) <= SelectedMaximumDate.Day)
+                            {                                
+                                continue;
+                            }
+                        }
+                    }
+
+                    DataRowsToDelete.Add(TableResults.Rows[i]);
+                }
+
+                foreach (DataGridViewRow DataRowForDelete in DataRowsToDelete)
+                {
+                    TableResults.Rows.Remove(DataRowForDelete);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong! Can't Filter Start Date", "Input Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnTranslate_Click(object sender, EventArgs e)
+        {
+            TranselateMenu.Show();
+            TranselateMenu.Top = this.Top + pagedControl1.Top + btnTranslate.Bottom + 3;
+            TranselateMenu.Left = this.Left + pagedControl1.Left + btnTranslate.Left;
+        }
+
+        private void TableResults_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            SelectedRow = e.RowIndex;
+
+            if (e.Button == MouseButtons.Right && e.RowIndex >= 0) 
+            {                
+                if (SelectedDataSet == "Project" && 
+                    TableResults.Columns[e.ColumnIndex].Name == "Progress" && TableRightClickMenu.Items.Count < 3) 
+                {
+                    TableRightClickMenu.Items.Add("Add Or Remove Precentage");
+                }
+                else if (TableRightClickMenu.Items.Count == 3)
+                {
+                    TableRightClickMenu.Items.RemoveAt(2);
+                }
+
+                TableRightClickMenu.Show();
+                TableRightClickMenu.Left = MousePosition.X;
+                TableRightClickMenu.Top = MousePosition.Y;
+            }
+        }
+
+        private void Menu_ItemClick(object sender, ToolStripItemClickedEventArgs e)
+        {
+            Guna2ContextMenuStrip SelectedMenu = (Guna2ContextMenuStrip)sender;
+
+            if (SelectedMenu.Tag.ToString() == "Main")
+            {
+                if (e.ClickedItem.Text == "Add Or Remove Precentage")
+                {
+                    for (int i = 0; i < TableResults.Rows.Count - 1; i++) 
+                    {
+                        DataGridViewRow gridViewRow = TableResults.Rows[i];
+
+                        if (!PrecentageMarkVisible)
+                        {
+                            gridViewRow.Cells["Progress"].Value += "%";
+                        }
+                        else
+                        {
+                            gridViewRow.Cells["Progress"].Value = 
+                                gridViewRow.Cells["Progress"].Value.ToString().Replace("%", "");
+                        }
+                    }
+
+                    if (PrecentageMarkVisible)
+                        PrecentageMarkVisible = false;
+                    else
+                        PrecentageMarkVisible = true;
+
+                }
+                else if (e.ClickedItem.Text == "Delete Row") 
+                {
+                    TableResults.Rows.RemoveAt(SelectedRow);
+                }
+            }
+            else
+            {
+                string SelectedField = e.ClickedItem.Tag.ToString();
+
+                if (SelectedField == "All")
+                {
+                    HeaderTranslate();
+
+                    foreach (string Field in new List<string> { "ZoneNo", "MethodOfExecution", "Permission" })
+                    {
+                        DefualtDataTranslate(FindMeaningsOFTranslate(Field), Field);
+                    }
+                }
+                else if (e.ClickedItem.Text == "Header" || e.ClickedItem.Text == "Header Only")
+                {
+                    HeaderTranslate();
+                }
+                else
+                {
+                    DefualtDataTranslate(FindMeaningsOFTranslate(SelectedField), SelectedField);
+                }                
+            }
+        }
+
+        private void HeaderTranslate()
+        {
+            Dictionary<string, string> TrancelateMeanings = FindMeaningsOFTranslate("Header");
+            foreach (KeyValuePair<string, string> KeyValue in TrancelateMeanings)
+            {
+                TableResults.Columns[KeyValue.Key].HeaderText = KeyValue.Value;
+            }
+        }
+
+        private void DefualtDataTranslate(Dictionary<string, string> TrancelateMeanings, string SelectedField)
+        {
+            for (int i = 0; i < TableResults.RowCount - 1; i++) 
+            {
+                DataGridViewRow dataRow = TableResults.Rows[i];
+
+                foreach (KeyValuePair<string, string> KeyValue in TrancelateMeanings)
+                {
+                    if (dataRow.Cells[SelectedField].Value.ToString() == KeyValue.Key)
+                    {
+                        dataRow.Cells[SelectedField].Value = KeyValue.Value;
+                    }
+                    else if (dataRow.Cells[SelectedField].Value.ToString() == KeyValue.Value)
+                    {
+                        dataRow.Cells[SelectedField].Value = KeyValue.Key;
+                    }
+                }
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            multiFunctions.NavigateTo(BtnClose.Tag.ToString(), this);
+        }
+
+        Dictionary<string, string> FindMeaningsOFTranslate(string Field)
+        {
+            Dictionary<string, string> Meanings = null;
+            switch (Field)
+            {
+                case "Header":
+                    {
+                        if (SelectedDataSet == "Project")
+                        {                           
+                            Meanings = new Dictionary<string, string>
+                            {
+                                {"ProjectID","අනු අංකය" },{"Discription","වැඩ විස්තරය" },{"MethodOfExecution","ක්‍රියාත්මක කිරීමේ ක්‍රමය" },
+                                {"Permission","අනුමැතිය" },{"StartDate","ආරම්භක දිනය" },{"EstName","ඇස්තමේනතුකරු" },
+                                {"EstimatedMoney","ඇස්තමේනතු මුදල" },{"ZoneNo","අංශය" },{"Expnediture Head","වැය ශීර්ෂය" },
+                                {"Progress","ප්‍රගතිය" },{"Details","ප්‍රගති විස්තරය" }
+                            };
+                        }
+                        else if (SelectedDataSet == "Production")
+                        {
+                            Meanings = new Dictionary<string, string>
+                            {
+                                {"PlantName","ජල පවිත්‍රාගාරය" },{"Date","දිනය" },{"Capacity","නිෂ්පාදිත ජල ධාරිතාව" },
+                                {"Cost","වියදම" },{"Details","විස්තරය" },{"Quality","ගුණාත්මක භාවය" }
+                            };
+                        }
+                        else
+                        {
+                            Meanings = new Dictionary<string, string>
+                            {
+                                {"LocationName","ප්‍රදේශය" },{"Month","මාසය" },{"Capacity","පරිභොජනය කල ජල ධාරිතාව" },
+                                {"MonthAmount","අදායම" }
+                            };
+                        }                        
+                        break;
+                    }
+                case "MethodOfExecution":
+                    {
+                        Meanings = new Dictionary<string, string>
+                        {
+                            {"Department","දෙපාර්තමේන්තු" },{"Tenderer","ටෙන්ඩර්" },{"Special Projects","විශේෂ ව්‍යාපෘති" }
+                        };
+                        break;
+                    }
+                case "Permission":
+                    {
+                        Meanings = new Dictionary<string, string>
+                        {
+                            {"Chief Engineer","ප්‍රධාන ඉංජිනේරු" },{"Commissioner","නාගරික කොමසාරිස්" },{"Council","සභාව" }
+                        };
+                        break;
+                    }
+                case "ZoneNo":
+                    {
+                        Meanings = new Dictionary<string, string>
+                        {
+                            {"Development","සංවර්ධන" },{"Meter Section Disconnection","විසන්දි කිරීම" },{"Meter Section Repair Near Meter","මීටරය අසල නඩත්තු" },
+                            {"Meter Section Meter Lab","මීටර පරික්ෂණාගාරය" },{"New Connection","නව සම්බන්දතා" },{"O&M Section Pump Station","පොම්පාගාර" },
+                            {"O&M Section Zone1","කලාප 1" },{"O&M Section Zone2","කලාප 2" },{"O&M Section Zone3","කලාප 3" },
+                        };
+                        break;
+                    }
+            }
+
+            return Meanings;
+        }
+
+        void ResetTranslateMenuItems()
+        {
+            TranselateMenu.Items.Clear();
+
+            if (SelectedDataSet == "Project")
+            {
+                List<string> ColumnNameList = new List<string> 
+                {
+                    "Header Only", "Permission Field Only", "Method Of Execution Field Only",
+                    "Section Field Only", "All" 
+                };
+
+                List<string> TagList = new List<string>
+                {
+                    "Header", "Permission", "MethodOfExecution", "ZoneNo", "All"
+                };
+
+                for (int i = 0; i < ColumnNameList.Count; i++)
+                {
+                    TranselateMenu.Items.Add(ColumnNameList[i]);
+                    TranselateMenu.Items[i].Tag = TagList[i];
+                }
+                PrecentageMarkVisible = false;
+            }
+            else
+            {
+                TranselateMenu.Items.Add("Header");
+                TranselateMenu.Items[0].Tag = "Header";
             }
         }
     }

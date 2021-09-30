@@ -30,9 +30,10 @@ namespace Project_Manegement_System_KMC_Water
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportFile));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@ namespace Project_Manegement_System_KMC_Water
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(575, 30);
+            this.panel1.Size = new System.Drawing.Size(571, 30);
             this.panel1.TabIndex = 4;
             // 
             // btnClose
@@ -70,7 +71,7 @@ namespace Project_Manegement_System_KMC_Water
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.HoverState.Parent = this.btnClose;
             this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(530, 0);
+            this.btnClose.Location = new System.Drawing.Point(526, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
             this.btnClose.Size = new System.Drawing.Size(45, 30);
@@ -94,6 +95,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnChooseFile
             // 
+            this.btnChooseFile.Animated = true;
             this.btnChooseFile.BackColor = System.Drawing.Color.Transparent;
             this.btnChooseFile.BorderRadius = 15;
             this.btnChooseFile.CheckedState.Parent = this.btnChooseFile;
@@ -122,6 +124,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtPath
             // 
+            this.txtPath.Animated = true;
             this.txtPath.BackColor = System.Drawing.Color.Transparent;
             this.txtPath.BorderRadius = 15;
             this.txtPath.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -159,31 +162,31 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // DataGridViewImportData
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
-            this.DataGridViewImportData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(223)))), ((int)(((byte)(251)))));
+            this.DataGridViewImportData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DataGridViewImportData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridViewImportData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.DataGridViewImportData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridViewImportData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridViewImportData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewImportData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewImportData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DataGridViewImportData.ColumnHeadersHeight = 30;
             this.DataGridViewImportData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewImportData.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewImportData.DefaultCellStyle = dataGridViewCellStyle9;
             this.DataGridViewImportData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DataGridViewImportData.EnableHeadersVisualStyles = false;
             this.DataGridViewImportData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
@@ -220,6 +223,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnImport
             // 
+            this.btnImport.Animated = true;
             this.btnImport.BackColor = System.Drawing.Color.Transparent;
             this.btnImport.BorderRadius = 15;
             this.btnImport.CheckedState.Parent = this.btnImport;
@@ -233,7 +237,7 @@ namespace Project_Manegement_System_KMC_Water
             this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnImport.ForeColor = System.Drawing.Color.White;
             this.btnImport.HoverState.Parent = this.btnImport;
-            this.btnImport.Location = new System.Drawing.Point(423, 410);
+            this.btnImport.Location = new System.Drawing.Point(423, 408);
             this.btnImport.Name = "btnImport";
             this.btnImport.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
             this.btnImport.ShadowDecoration.BorderRadius = 15;
@@ -281,6 +285,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // guna2CircleButton1
             // 
+            this.guna2CircleButton1.Animated = true;
             this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
             this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
@@ -309,6 +314,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // guna2CircleButton2
             // 
+            this.guna2CircleButton2.Animated = true;
             this.guna2CircleButton2.BackColor = System.Drawing.Color.Transparent;
             this.guna2CircleButton2.CheckedState.Parent = this.guna2CircleButton2;
             this.guna2CircleButton2.CustomImages.Parent = this.guna2CircleButton2;
@@ -365,7 +371,7 @@ namespace Project_Manegement_System_KMC_Water
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(575, 462);
+            this.ClientSize = new System.Drawing.Size(571, 458);
             this.ControlBox = false;
             this.Controls.Add(this.guna2ProgressBar2);
             this.Controls.Add(this.guna2CircleButton2);
@@ -378,6 +384,7 @@ namespace Project_Manegement_System_KMC_Water
             this.Controls.Add(this.btnChooseFile);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ImportFile";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

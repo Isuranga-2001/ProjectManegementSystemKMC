@@ -78,7 +78,7 @@ namespace Project_Manegement_System___KMC
                 conn.Close();
                 return null;
             }
-            catch (Exception e)
+            catch
             {
                 conn.Close();
                 return null;
@@ -109,7 +109,7 @@ namespace Project_Manegement_System___KMC
                 conn.Close();
                 return true;
             }
-            catch (Exception e)
+            catch
             {
                 conn.Close();
                 return false;

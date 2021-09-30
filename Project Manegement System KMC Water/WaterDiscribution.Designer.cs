@@ -30,16 +30,17 @@ namespace Project_Manegement_System_KMC_Water
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WaterDiscribution));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -204,7 +205,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton10.ShadowDecoration.Parent = this.guna2CircleButton10;
             this.guna2CircleButton10.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton10.TabIndex = 96;
-            this.guna2CircleButton10.Tag = "Income";
+            this.guna2CircleButton10.Tag = "Edit";
             this.guna2CircleButton10.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // guna2Separator2
@@ -241,6 +242,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton4.ShadowDecoration.Parent = this.guna2CircleButton4;
             this.guna2CircleButton4.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton4.TabIndex = 90;
+            this.guna2CircleButton4.Tag = "Filter";
             this.guna2CircleButton4.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // guna2CircleButton9
@@ -332,6 +334,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton8.ShadowDecoration.Parent = this.guna2CircleButton8;
             this.guna2CircleButton8.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton8.TabIndex = 94;
+            this.guna2CircleButton8.Tag = "LogOut";
             this.guna2CircleButton8.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // guna2CircleButton7
@@ -358,6 +361,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton7.ShadowDecoration.Parent = this.guna2CircleButton7;
             this.guna2CircleButton7.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton7.TabIndex = 93;
+            this.guna2CircleButton7.Tag = "Settings";
             this.guna2CircleButton7.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // guna2CircleButton6
@@ -440,6 +444,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
             this.guna2CircleButton1.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton1.TabIndex = 87;
+            this.guna2CircleButton1.Tag = "Dashboard";
             this.guna2CircleButton1.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // PanelTitle
@@ -495,6 +500,8 @@ namespace Project_Manegement_System_KMC_Water
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
             this.btnClose.Size = new System.Drawing.Size(45, 30);
             this.btnClose.TabIndex = 48;
+            this.btnClose.Tag = "Exit";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // LoadingAnimation
             // 
@@ -558,6 +565,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnChartAverage
             // 
+            this.btnChartAverage.Animated = true;
             this.btnChartAverage.BorderRadius = 15;
             this.btnChartAverage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnChartAverage.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
@@ -592,6 +600,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnChartTotal
             // 
+            this.btnChartTotal.Animated = true;
             this.btnChartTotal.BorderRadius = 15;
             this.btnChartTotal.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnChartTotal.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
@@ -631,37 +640,37 @@ namespace Project_Manegement_System_KMC_Water
             this.ChartProductionHistory.BorderlineWidth = 0;
             this.ChartProductionHistory.BorderSkin.BackColor = System.Drawing.Color.White;
             this.ChartProductionHistory.BorderSkin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisX2.MajorGrid.Enabled = false;
-            chartArea3.AxisX2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisX2.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisX2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisY.MajorGrid.Enabled = false;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisY2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisY2.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.AxisY2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea3.Name = "ChartArea1";
-            this.ChartProductionHistory.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisX2.MajorGrid.Enabled = false;
+            chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisX2.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisX2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisY.MajorGrid.Enabled = false;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisY2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisY2.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.AxisY2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea1.Name = "ChartArea1";
+            this.ChartProductionHistory.ChartAreas.Add(chartArea1);
             this.ChartProductionHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Alignment = System.Drawing.StringAlignment.Center;
-            legend3.BackColor = System.Drawing.Color.Transparent;
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend3.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
-            legend3.Name = "Legend1";
-            legend3.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
-            this.ChartProductionHistory.Legends.Add(legend3);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
+            legend1.Name = "Legend1";
+            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.ChartProductionHistory.Legends.Add(legend1);
             this.ChartProductionHistory.Location = new System.Drawing.Point(0, 0);
             this.ChartProductionHistory.Name = "ChartProductionHistory";
             this.ChartProductionHistory.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -671,30 +680,28 @@ namespace Project_Manegement_System_KMC_Water
         System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))))};
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series5.Legend = "Legend1";
-            series5.Name = "Production";
-            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
-            series5.YValuesPerPoint = 2;
-            series5.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series6.Legend = "Legend1";
-            series6.Name = "Consumption";
-            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
-            series6.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.ChartProductionHistory.Series.Add(series5);
-            this.ChartProductionHistory.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series1.Legend = "Legend1";
+            series1.Name = "Production";
+            series1.YValuesPerPoint = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series2.Legend = "Legend1";
+            series2.Name = "Consumption";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.ChartProductionHistory.Series.Add(series1);
+            this.ChartProductionHistory.Series.Add(series2);
             this.ChartProductionHistory.Size = new System.Drawing.Size(1142, 552);
             this.ChartProductionHistory.TabIndex = 6;
             this.ChartProductionHistory.Text = "chart1";
-            title3.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            title3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            title3.Name = "Title1";
-            title3.Text = "Monthly Water Production And Consumption In Last 12 Months";
-            this.ChartProductionHistory.Titles.Add(title3);
+            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            title1.Name = "Title1";
+            title1.Text = "Monthly Water Production And Consumption In Last 12 Months";
+            this.ChartProductionHistory.Titles.Add(title1);
             this.ChartProductionHistory.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChartProductionHistory_MouseClick);
             // 
             // tableLayoutPanel1
@@ -855,6 +862,7 @@ namespace Project_Manegement_System_KMC_Water
             this.btnExport.TabIndex = 5;
             this.btnExport.Tag = "5";
             this.btnExport.Text = "Export";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // guna2Button1
             // 
@@ -917,7 +925,7 @@ namespace Project_Manegement_System_KMC_Water
             this.page2.Controls.Add(this.guna2Panel3);
             this.page2.Location = new System.Drawing.Point(0, 0);
             this.page2.Name = "page2";
-            this.page2.Size = new System.Drawing.Size(1142, 549);
+            this.page2.Size = new System.Drawing.Size(1142, 552);
             this.page2.Text = "Page 2";
             // 
             // guna2Panel3
@@ -930,7 +938,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1142, 549);
+            this.guna2Panel3.Size = new System.Drawing.Size(1142, 552);
             this.guna2Panel3.TabIndex = 0;
             // 
             // PanelAvailableChartSeries
@@ -972,6 +980,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtAreaSearch
             // 
+            this.txtAreaSearch.Animated = true;
             this.txtAreaSearch.BorderColor = System.Drawing.Color.Gainsboro;
             this.txtAreaSearch.BorderRadius = 20;
             this.txtAreaSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -1008,37 +1017,37 @@ namespace Project_Manegement_System_KMC_Water
             this.ChartAreaViseConsumption.BorderlineWidth = 0;
             this.ChartAreaViseConsumption.BorderSkin.BackColor = System.Drawing.Color.White;
             this.ChartAreaViseConsumption.BorderSkin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisX.MajorGrid.Enabled = false;
-            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisX2.MajorGrid.Enabled = false;
-            chartArea4.AxisX2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisX2.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisX2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisY.MajorGrid.Enabled = false;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisY2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisY2.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.AxisY2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.BackColor = System.Drawing.Color.Transparent;
-            chartArea4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            chartArea4.Name = "ChartArea1";
-            this.ChartAreaViseConsumption.ChartAreas.Add(chartArea4);
+            chartArea2.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisX2.MajorGrid.Enabled = false;
+            chartArea2.AxisX2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisX2.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisX2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisY2.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisY2.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.AxisY2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            chartArea2.Name = "ChartArea1";
+            this.ChartAreaViseConsumption.ChartAreas.Add(chartArea2);
             this.ChartAreaViseConsumption.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Alignment = System.Drawing.StringAlignment.Center;
-            legend4.BackColor = System.Drawing.Color.Transparent;
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend4.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
-            legend4.Name = "Legend1";
-            legend4.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
-            this.ChartAreaViseConsumption.Legends.Add(legend4);
+            legend2.Alignment = System.Drawing.StringAlignment.Center;
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
+            legend2.Name = "Legend1";
+            legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.ChartAreaViseConsumption.Legends.Add(legend2);
             this.ChartAreaViseConsumption.Location = new System.Drawing.Point(0, 0);
             this.ChartAreaViseConsumption.Name = "ChartAreaViseConsumption";
             this.ChartAreaViseConsumption.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -1048,34 +1057,35 @@ namespace Project_Manegement_System_KMC_Water
         System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))))};
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series7.Legend = "Legend1";
-            series7.Name = "Production";
-            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
-            series7.YValuesPerPoint = 2;
-            series7.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series8.Legend = "Legend1";
-            series8.Name = "Consumption";
-            series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
-            series8.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.ChartAreaViseConsumption.Series.Add(series7);
-            this.ChartAreaViseConsumption.Series.Add(series8);
-            this.ChartAreaViseConsumption.Size = new System.Drawing.Size(1142, 549);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series3.Legend = "Legend1";
+            series3.Name = "Production";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
+            series3.YValuesPerPoint = 2;
+            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series4.Legend = "Legend1";
+            series4.Name = "Consumption";
+            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
+            series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.ChartAreaViseConsumption.Series.Add(series3);
+            this.ChartAreaViseConsumption.Series.Add(series4);
+            this.ChartAreaViseConsumption.Size = new System.Drawing.Size(1142, 552);
             this.ChartAreaViseConsumption.TabIndex = 7;
             this.ChartAreaViseConsumption.Text = "chart1";
-            title4.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            title4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            title4.Name = "Title1";
-            title4.Text = "Area Vise Water Consumption In Last 12 Months";
-            this.ChartAreaViseConsumption.Titles.Add(title4);
+            title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            title2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            title2.Name = "Title1";
+            title2.Text = "Area Vise Water Consumption In Last 12 Months";
+            this.ChartAreaViseConsumption.Titles.Add(title2);
             this.ChartAreaViseConsumption.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChartProductionHistory_MouseClick);
             // 
             // btnShowHidePanelSeries
             // 
+            this.btnShowHidePanelSeries.Animated = true;
             this.btnShowHidePanelSeries.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnShowHidePanelSeries.BorderRadius = 10;
             this.btnShowHidePanelSeries.BorderThickness = 1;
@@ -1116,6 +1126,7 @@ namespace Project_Manegement_System_KMC_Water
             this.toolStripMenuItem6});
             this.MenuStripChangeStartTime.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.MenuStripChangeStartTime.Name = "TranslateMenuStrip";
+            this.MenuStripChangeStartTime.OwnerItem = this.toolStripMenuItem7;
             this.MenuStripChangeStartTime.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.MenuStripChangeStartTime.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
             this.MenuStripChangeStartTime.RenderStyle.ColorTable = null;
@@ -1219,6 +1230,7 @@ namespace Project_Manegement_System_KMC_Water
             this.toolStripMenuItem14});
             this.MenuStripDataShowType.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.MenuStripDataShowType.Name = "TranslateMenuStrip";
+            this.MenuStripDataShowType.OwnerItem = this.toolStripMenuItem8;
             this.MenuStripDataShowType.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.MenuStripDataShowType.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
             this.MenuStripDataShowType.RenderStyle.ColorTable = null;
@@ -1234,14 +1246,14 @@ namespace Project_Manegement_System_KMC_Water
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(129, 22);
             this.toolStripMenuItem13.Tag = "-60";
             this.toolStripMenuItem13.Text = "Total";
             // 
             // toolStripMenuItem14
             // 
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(129, 22);
             this.toolStripMenuItem14.Tag = "-72";
             this.toolStripMenuItem14.Text = "Average";
             // 
@@ -1256,6 +1268,7 @@ namespace Project_Manegement_System_KMC_Water
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.PanelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WaterDiscribution";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.WaterDiscribution_Load);

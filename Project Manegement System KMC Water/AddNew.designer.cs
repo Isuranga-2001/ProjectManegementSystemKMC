@@ -214,6 +214,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnAddProgress
             // 
+            this.btnAddProgress.Animated = true;
             this.btnAddProgress.BorderColor = System.Drawing.Color.Transparent;
             this.btnAddProgress.BorderRadius = 18;
             this.btnAddProgress.CheckedState.Parent = this.btnAddProgress;
@@ -237,6 +238,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnClear
             // 
+            this.btnClear.Animated = true;
             this.btnClear.BorderColor = System.Drawing.Color.Transparent;
             this.btnClear.BorderRadius = 18;
             this.btnClear.CheckedState.Parent = this.btnClear;
@@ -314,10 +316,12 @@ namespace Project_Manegement_System_KMC_Water
             this.btnClose.ShadowDecoration.Parent = this.btnClose;
             this.btnClose.Size = new System.Drawing.Size(45, 30);
             this.btnClose.TabIndex = 48;
+            this.btnClose.Tag = "Exit";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // BtnAdd
             // 
+            this.BtnAdd.Animated = true;
             this.BtnAdd.BackColor = System.Drawing.Color.Transparent;
             this.BtnAdd.BorderColor = System.Drawing.Color.Teal;
             this.BtnAdd.BorderRadius = 18;
@@ -371,9 +375,11 @@ namespace Project_Manegement_System_KMC_Water
             this.txtEstimator.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1, 1, 2, 2);
             this.txtEstimator.Size = new System.Drawing.Size(366, 36);
             this.txtEstimator.TabIndex = 75;
+            this.txtEstimator.SelectedValueChanged += new System.EventHandler(this.btnDropDownMenu_SelectionChanged);
             // 
             // txtEHSub3
             // 
+            this.txtEHSub3.Animated = true;
             this.txtEHSub3.BackColor = System.Drawing.Color.Transparent;
             this.txtEHSub3.BorderColor = System.Drawing.Color.Gainsboro;
             this.txtEHSub3.BorderRadius = 15;
@@ -413,6 +419,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtEHSub2
             // 
+            this.txtEHSub2.Animated = true;
             this.txtEHSub2.BackColor = System.Drawing.Color.Transparent;
             this.txtEHSub2.BorderColor = System.Drawing.Color.Gainsboro;
             this.txtEHSub2.BorderRadius = 15;
@@ -452,6 +459,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtEHSub1
             // 
+            this.txtEHSub1.Animated = true;
             this.txtEHSub1.BackColor = System.Drawing.Color.Transparent;
             this.txtEHSub1.BorderColor = System.Drawing.Color.Gainsboro;
             this.txtEHSub1.BorderRadius = 15;
@@ -491,6 +499,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnEHSelect
             // 
+            this.btnEHSelect.Animated = true;
             this.btnEHSelect.BackColor = System.Drawing.Color.Transparent;
             this.btnEHSelect.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnEHSelect.BorderRadius = 15;
@@ -518,6 +527,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtEHMain
             // 
+            this.txtEHMain.Animated = true;
             this.txtEHMain.BackColor = System.Drawing.Color.Transparent;
             this.txtEHMain.BorderColor = System.Drawing.Color.Gainsboro;
             this.txtEHMain.BorderRadius = 15;
@@ -557,6 +567,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtEstimatedMoney
             // 
+            this.txtEstimatedMoney.Animated = true;
             this.txtEstimatedMoney.BackColor = System.Drawing.Color.Transparent;
             this.txtEstimatedMoney.BorderColor = System.Drawing.Color.Gainsboro;
             this.txtEstimatedMoney.BorderRadius = 15;
@@ -609,6 +620,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtProjectID
             // 
+            this.txtProjectID.Animated = true;
             this.txtProjectID.BackColor = System.Drawing.Color.Transparent;
             this.txtProjectID.BorderColor = System.Drawing.Color.Gainsboro;
             this.txtProjectID.BorderRadius = 15;
@@ -648,6 +660,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtDescription
             // 
+            this.txtDescription.Animated = true;
             this.txtDescription.BackColor = System.Drawing.Color.Transparent;
             this.txtDescription.BorderColor = System.Drawing.Color.Gainsboro;
             this.txtDescription.BorderRadius = 15;
@@ -818,6 +831,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton8.ShadowDecoration.Parent = this.guna2CircleButton8;
             this.guna2CircleButton8.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton8.TabIndex = 94;
+            this.guna2CircleButton8.Tag = "LogOut";
             this.guna2CircleButton8.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // guna2CircleButton7
@@ -844,6 +858,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton7.ShadowDecoration.Parent = this.guna2CircleButton7;
             this.guna2CircleButton7.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton7.TabIndex = 93;
+            this.guna2CircleButton7.Tag = "Settings";
             this.guna2CircleButton7.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // guna2CircleButton6
@@ -897,6 +912,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton5.ShadowDecoration.Parent = this.guna2CircleButton5;
             this.guna2CircleButton5.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton5.TabIndex = 91;
+            this.guna2CircleButton5.Tag = "Edit";
             this.guna2CircleButton5.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // guna2CircleButton4
@@ -923,6 +939,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton4.ShadowDecoration.Parent = this.guna2CircleButton4;
             this.guna2CircleButton4.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton4.TabIndex = 90;
+            this.guna2CircleButton4.Tag = "Filter";
             this.guna2CircleButton4.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // guna2CircleButton3
@@ -1007,6 +1024,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
             this.guna2CircleButton1.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton1.TabIndex = 87;
+            this.guna2CircleButton1.Tag = "Dashboard";
             this.guna2CircleButton1.Click += new System.EventHandler(this.FormNavigationButton_Click);
             // 
             // UpDownDateYear
@@ -1171,9 +1189,11 @@ namespace Project_Manegement_System_KMC_Water
             this.txtSection.Size = new System.Drawing.Size(345, 36);
             this.txtSection.TabIndex = 89;
             this.txtSection.TextOffset = new System.Drawing.Point(5, 0);
+            this.txtSection.SelectedValueChanged += new System.EventHandler(this.btnDropDownMenu_SelectionChanged);
             // 
             // btnPermissionCE
             // 
+            this.btnPermissionCE.Animated = true;
             this.btnPermissionCE.BackColor = System.Drawing.Color.Transparent;
             this.btnPermissionCE.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnPermissionCE.BorderRadius = 15;
@@ -1212,6 +1232,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnPermissionCom
             // 
+            this.btnPermissionCom.Animated = true;
             this.btnPermissionCom.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnPermissionCom.BorderThickness = 1;
             this.btnPermissionCom.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -1246,6 +1267,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnMethordofExecutionD
             // 
+            this.btnMethordofExecutionD.Animated = true;
             this.btnMethordofExecutionD.BackColor = System.Drawing.Color.Transparent;
             this.btnMethordofExecutionD.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnMethordofExecutionD.BorderRadius = 15;
@@ -1283,6 +1305,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnMethordofExecutionT
             // 
+            this.btnMethordofExecutionT.Animated = true;
             this.btnMethordofExecutionT.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnMethordofExecutionT.BorderThickness = 1;
             this.btnMethordofExecutionT.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
@@ -1316,6 +1339,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnMethordofExecutionSP
             // 
+            this.btnMethordofExecutionSP.Animated = true;
             this.btnMethordofExecutionSP.BackColor = System.Drawing.Color.Transparent;
             this.btnMethordofExecutionSP.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnMethordofExecutionSP.BorderRadius = 15;
@@ -1353,6 +1377,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnPermissionC
             // 
+            this.btnPermissionC.Animated = true;
             this.btnPermissionC.BackColor = System.Drawing.Color.Transparent;
             this.btnPermissionC.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnPermissionC.BorderRadius = 15;

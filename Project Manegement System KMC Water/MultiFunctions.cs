@@ -160,12 +160,6 @@ namespace Project_Manegement_System_KMC_Water
                         form.Show();
                         break;
                     }
-                case "Income":
-                    {
-                        Income form = new Income();
-                        form.Show();
-                        break;
-                    }
                 case "Add":
                     {
                         AddNew form = new AddNew();
@@ -184,7 +178,41 @@ namespace Project_Manegement_System_KMC_Water
                         form.Show();
                         break;
                     }
-
+                case "Dashboard":
+                    {
+                        DashBoard form = new DashBoard();
+                        form.Show();
+                        break;
+                    }
+                case "Edit":
+                    {
+                        EditData form = new EditData();
+                        form.Show();
+                        break;
+                    }
+                case "Filter":
+                    {
+                        Filter form = new Filter();
+                        form.Show();
+                        break;
+                    }
+                case "Settings":
+                    {
+                        SettingsForm form = new SettingsForm();
+                        form.Show();
+                        break;
+                    }
+                case "Exit":
+                    {
+                        Application.Exit();
+                        break;
+                    }
+                case "LogOut":
+                    {
+                        Login form = new Login();
+                        form.Show();
+                        break;
+                    }
             }
             CurrentForm.Close();
         }

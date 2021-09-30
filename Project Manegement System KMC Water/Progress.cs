@@ -26,13 +26,6 @@ namespace Project_Manegement_System_KMC_Water
         List<string> MonthEnglish = new List<string> { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
         List<string> MonthNomber = new List<string> { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "1", "12" };
 
-        private void btnAddData_Click(object sender, EventArgs e)
-        {
-            AddNew form = new AddNew();
-            form.Show();
-            this.Hide();
-        }
-
         private void Search(object sender, EventArgs e)
         {
             SearchDetails();
@@ -338,13 +331,6 @@ namespace Project_Manegement_System_KMC_Water
             txtDate.Clear();
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            DashBoard form = new DashBoard();
-            form.Show();
-            this.Close();
-        }
-
         private void btnSelect_Click(object sender, EventArgs e)
         {
             SelectProject form = new SelectProject();
@@ -358,32 +344,6 @@ namespace Project_Manegement_System_KMC_Water
             {
                 this.Close();
             }
-        }
-
-        private void btnFilter_Click(object sender, EventArgs e)
-        {
-            Filter form = new Filter();
-            form.Show();
-            this.Hide();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            multiFunctions.SignOut(this);
-        }
-
-        private void btnProgressHistory_Click(object sender, EventArgs e)
-        {
-            ProgressHistory form = new ProgressHistory();
-            form.Show();
-            this.Close();
-        }
-
-        private void btnSignOut_Click(object sender, EventArgs e)
-        {
-            Login form = new Login();
-            form.Show();
-            this.Close();
         }
 
         private void btnRemoveProject_Click(object sender, EventArgs e)
@@ -412,44 +372,23 @@ namespace Project_Manegement_System_KMC_Water
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
-        {/*
-            EditDataCustomize form = new EditDataCustomize();
-            form.ProjectID = txtProjectID.Text;
-            string[] EHParts = txtEH.Text.Split('-');
-            form.Person = sqlFunctions.SQLRead("SELECT Person.Name FROM Person,PersonProject WHERE PersonProject.PID=Person.PID AND PersonProject.ProjectID='" + txtProjectID.Text + "'", "Name")[0];
-            if (EHParts[0] == "Not Assign")
-                form.txtEH.Text = "";
-            else
-            {
-                if (EHParts.Length > 3)
-                {
-                    form.txtEH.Text = EHParts[0].Trim() + " - " + EHParts[1].Trim() + " - " + EHParts[2].Trim() + " - " + EHParts[3].Trim();
-                    form.EHSub3 = EHParts[3].Trim();
-                }
-                else
-                {
-                    form.txtEH.Text = EHParts[0].Trim() + " - " + EHParts[1].Trim() + " - " + EHParts[2].Trim();
-                    form.EHSub3 = "";
-                }
-
-                form.EHMain = EHParts[0].Trim();
-                form.EHSub1 = EHParts[1].Trim();
-                form.EHSub2 = EHParts[2].Trim();
-            }
-            form.MOE = txtMOE.Text;
-            form.Permission = txtPermission.Text;
-            form.StartDate = txtDate.Text;
-            form.EstimatedMoney = txtEstimatedMoney.Text;
-            form.Estimator = sqlFunctions.SQLRead("SELECT Estimator.EstName FROM Estimator,Project WHERE Project.EstimatorNo=Estimator.Estimatorno AND Project.ProjectID='" + txtProjectID.Text + "'", "EstName")[0];
-            form.Description = txtDescription.Text.Trim();
-            form.ShowDialog();
-            SearchDetails();*/
+        {
+            EditData form = new EditData();
+            form.Show();
+            form.txtSearch.Text = txtDescription.Text.Trim();
+            form.LoadTableData("WHERE Project.Discription LIKE N'%" + txtDescription.Text.Trim() + "%'");
+            this.Close();
         }
 
         private void NavigationBarButton_Click(object sender, EventArgs e)
         {
             Guna2CircleButton NavigationBarButton = (Guna2CircleButton)sender;
             multiFunctions.NavigateTo(NavigationBarButton.Tag.ToString(), this);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            multiFunctions.NavigateTo(btnClose.Tag.ToString(), this);
         }
     }
 }

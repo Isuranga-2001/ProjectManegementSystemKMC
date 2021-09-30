@@ -29,6 +29,7 @@ namespace Project_Manegement_System_KMC_Water
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilterCustomization));
             this.pagedControl1 = new Manina.Windows.Forms.PagedControl();
             this.page1 = new Manina.Windows.Forms.Page();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -71,11 +72,11 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.page2 = new Manina.Windows.Forms.Page();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.ToggleSwitchProductionDateAll = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.MaximumProductionDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.MinimumProductionDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -969,7 +970,6 @@ namespace Project_Manegement_System_KMC_Water
             // ToggleSwitchProgressHistory
             // 
             this.ToggleSwitchProgressHistory.Animated = true;
-            this.ToggleSwitchProgressHistory.Checked = true;
             this.ToggleSwitchProgressHistory.CheckedState.BorderColor = System.Drawing.Color.White;
             this.ToggleSwitchProgressHistory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
             this.ToggleSwitchProgressHistory.CheckedState.InnerBorderColor = System.Drawing.Color.White;
@@ -1013,7 +1013,6 @@ namespace Project_Manegement_System_KMC_Water
             this.btnSelectedProgressStatusUnderWork.DisabledState.FillColor = System.Drawing.Color.Gainsboro;
             this.btnSelectedProgressStatusUnderWork.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
             this.btnSelectedProgressStatusUnderWork.DisabledState.Parent = this.btnSelectedProgressStatusUnderWork;
-            this.btnSelectedProgressStatusUnderWork.Enabled = false;
             this.btnSelectedProgressStatusUnderWork.FillColor = System.Drawing.Color.White;
             this.btnSelectedProgressStatusUnderWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectedProgressStatusUnderWork.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
@@ -1049,7 +1048,6 @@ namespace Project_Manegement_System_KMC_Water
             this.btnSelectedProgressStatusNotStarted.DisabledState.FillColor = System.Drawing.Color.Gainsboro;
             this.btnSelectedProgressStatusNotStarted.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
             this.btnSelectedProgressStatusNotStarted.DisabledState.Parent = this.btnSelectedProgressStatusNotStarted;
-            this.btnSelectedProgressStatusNotStarted.Enabled = false;
             this.btnSelectedProgressStatusNotStarted.FillColor = System.Drawing.Color.White;
             this.btnSelectedProgressStatusNotStarted.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectedProgressStatusNotStarted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
@@ -1085,7 +1083,6 @@ namespace Project_Manegement_System_KMC_Water
             this.btnSelectedProgressStatusCompleted.DisabledState.FillColor = System.Drawing.Color.Gainsboro;
             this.btnSelectedProgressStatusCompleted.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
             this.btnSelectedProgressStatusCompleted.DisabledState.Parent = this.btnSelectedProgressStatusCompleted;
-            this.btnSelectedProgressStatusCompleted.Enabled = false;
             this.btnSelectedProgressStatusCompleted.FillColor = System.Drawing.Color.White;
             this.btnSelectedProgressStatusCompleted.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectedProgressStatusCompleted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
@@ -1127,11 +1124,11 @@ namespace Project_Manegement_System_KMC_Water
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.BorderRadius = 17;
-            this.guna2Panel3.Controls.Add(this.guna2ToggleSwitch1);
+            this.guna2Panel3.Controls.Add(this.ToggleSwitchProductionDateAll);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel10);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel11);
-            this.guna2Panel3.Controls.Add(this.guna2DateTimePicker1);
-            this.guna2Panel3.Controls.Add(this.guna2DateTimePicker2);
+            this.guna2Panel3.Controls.Add(this.MaximumProductionDate);
+            this.guna2Panel3.Controls.Add(this.MinimumProductionDate);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel12);
             this.guna2Panel3.FillColor = System.Drawing.Color.White;
             this.guna2Panel3.Location = new System.Drawing.Point(15, 15);
@@ -1148,25 +1145,27 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Panel3.Size = new System.Drawing.Size(539, 140);
             this.guna2Panel3.TabIndex = 2;
             // 
-            // guna2ToggleSwitch1
+            // ToggleSwitchProductionDateAll
             // 
-            this.guna2ToggleSwitch1.Animated = true;
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(67, 105);
-            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.ShadowDecoration.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(35, 20);
-            this.guna2ToggleSwitch1.TabIndex = 7;
-            this.guna2ToggleSwitch1.Tag = "StartDate";
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.Parent = this.guna2ToggleSwitch1;
+            this.ToggleSwitchProductionDateAll.Animated = true;
+            this.ToggleSwitchProductionDateAll.Checked = true;
+            this.ToggleSwitchProductionDateAll.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.ToggleSwitchProductionDateAll.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
+            this.ToggleSwitchProductionDateAll.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.ToggleSwitchProductionDateAll.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.ToggleSwitchProductionDateAll.CheckedState.Parent = this.ToggleSwitchProductionDateAll;
+            this.ToggleSwitchProductionDateAll.Location = new System.Drawing.Point(67, 105);
+            this.ToggleSwitchProductionDateAll.Name = "ToggleSwitchProductionDateAll";
+            this.ToggleSwitchProductionDateAll.ShadowDecoration.Parent = this.ToggleSwitchProductionDateAll;
+            this.ToggleSwitchProductionDateAll.Size = new System.Drawing.Size(35, 20);
+            this.ToggleSwitchProductionDateAll.TabIndex = 7;
+            this.ToggleSwitchProductionDateAll.Tag = "StartDate";
+            this.ToggleSwitchProductionDateAll.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ToggleSwitchProductionDateAll.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ToggleSwitchProductionDateAll.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.ToggleSwitchProductionDateAll.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.ToggleSwitchProductionDateAll.UncheckedState.Parent = this.ToggleSwitchProductionDateAll;
+            this.ToggleSwitchProductionDateAll.CheckedChanged += new System.EventHandler(this.ToggleSwitchProductionDateAll_CheckedChanged);
             // 
             // guna2HtmlLabel10
             // 
@@ -1189,63 +1188,65 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2HtmlLabel11.TabIndex = 5;
             this.guna2HtmlLabel11.Text = "To";
             // 
-            // guna2DateTimePicker1
+            // MaximumProductionDate
             // 
-            this.guna2DateTimePicker1.Animated = true;
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2DateTimePicker1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2DateTimePicker1.BorderRadius = 15;
-            this.guna2DateTimePicker1.BorderThickness = 1;
-            this.guna2DateTimePicker1.CheckedState.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2DateTimePicker1.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.CustomFormat = "MMMM dd, yyyy";
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(304, 54);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.BorderRadius = 15;
-            this.guna2DateTimePicker1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(219, 36);
-            this.guna2DateTimePicker1.TabIndex = 4;
-            this.guna2DateTimePicker1.Tag = "MaximumStartDate";
-            this.guna2DateTimePicker1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 9, 16, 23, 58, 59, 734);
+            this.MaximumProductionDate.Animated = true;
+            this.MaximumProductionDate.BackColor = System.Drawing.Color.Transparent;
+            this.MaximumProductionDate.BorderColor = System.Drawing.Color.Gainsboro;
+            this.MaximumProductionDate.BorderRadius = 15;
+            this.MaximumProductionDate.BorderThickness = 1;
+            this.MaximumProductionDate.CheckedState.BorderColor = System.Drawing.Color.Gainsboro;
+            this.MaximumProductionDate.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.MaximumProductionDate.CheckedState.Parent = this.MaximumProductionDate;
+            this.MaximumProductionDate.CustomFormat = "MMMM dd, yyyy";
+            this.MaximumProductionDate.FillColor = System.Drawing.Color.White;
+            this.MaximumProductionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.MaximumProductionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.MaximumProductionDate.HoverState.Parent = this.MaximumProductionDate;
+            this.MaximumProductionDate.Location = new System.Drawing.Point(304, 54);
+            this.MaximumProductionDate.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
+            this.MaximumProductionDate.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.MaximumProductionDate.Name = "MaximumProductionDate";
+            this.MaximumProductionDate.ShadowDecoration.BorderRadius = 15;
+            this.MaximumProductionDate.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.MaximumProductionDate.ShadowDecoration.Parent = this.MaximumProductionDate;
+            this.MaximumProductionDate.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
+            this.MaximumProductionDate.Size = new System.Drawing.Size(219, 36);
+            this.MaximumProductionDate.TabIndex = 4;
+            this.MaximumProductionDate.Tag = "MaximumProductionDate";
+            this.MaximumProductionDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MaximumProductionDate.Value = new System.DateTime(2021, 9, 16, 23, 58, 59, 734);
+            this.MaximumProductionDate.ValueChanged += new System.EventHandler(this.ProductionDate_ValueChanged);
             // 
-            // guna2DateTimePicker2
+            // MinimumProductionDate
             // 
-            this.guna2DateTimePicker2.Animated = true;
-            this.guna2DateTimePicker2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2DateTimePicker2.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2DateTimePicker2.BorderRadius = 15;
-            this.guna2DateTimePicker2.BorderThickness = 1;
-            this.guna2DateTimePicker2.CheckedState.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2DateTimePicker2.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2DateTimePicker2.CheckedState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.CustomFormat = "MMMM dd, yyyy";
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker2.HoverState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(21, 54);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.ShadowDecoration.BorderRadius = 15;
-            this.guna2DateTimePicker2.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2DateTimePicker2.ShadowDecoration.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(219, 36);
-            this.guna2DateTimePicker2.TabIndex = 3;
-            this.guna2DateTimePicker2.Tag = "MinimumStartDate";
-            this.guna2DateTimePicker2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2021, 9, 16, 23, 58, 59, 734);
+            this.MinimumProductionDate.Animated = true;
+            this.MinimumProductionDate.BackColor = System.Drawing.Color.Transparent;
+            this.MinimumProductionDate.BorderColor = System.Drawing.Color.Gainsboro;
+            this.MinimumProductionDate.BorderRadius = 15;
+            this.MinimumProductionDate.BorderThickness = 1;
+            this.MinimumProductionDate.CheckedState.BorderColor = System.Drawing.Color.Gainsboro;
+            this.MinimumProductionDate.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.MinimumProductionDate.CheckedState.Parent = this.MinimumProductionDate;
+            this.MinimumProductionDate.CustomFormat = "MMMM dd, yyyy";
+            this.MinimumProductionDate.FillColor = System.Drawing.Color.White;
+            this.MinimumProductionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.MinimumProductionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.MinimumProductionDate.HoverState.Parent = this.MinimumProductionDate;
+            this.MinimumProductionDate.Location = new System.Drawing.Point(21, 54);
+            this.MinimumProductionDate.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
+            this.MinimumProductionDate.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.MinimumProductionDate.Name = "MinimumProductionDate";
+            this.MinimumProductionDate.ShadowDecoration.BorderRadius = 15;
+            this.MinimumProductionDate.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.MinimumProductionDate.ShadowDecoration.Parent = this.MinimumProductionDate;
+            this.MinimumProductionDate.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
+            this.MinimumProductionDate.Size = new System.Drawing.Size(219, 36);
+            this.MinimumProductionDate.TabIndex = 3;
+            this.MinimumProductionDate.Tag = "MinimumProductionDate";
+            this.MinimumProductionDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MinimumProductionDate.Value = new System.DateTime(2021, 9, 16, 23, 58, 59, 734);
+            this.MinimumProductionDate.ValueChanged += new System.EventHandler(this.ProductionDate_ValueChanged);
             // 
             // guna2HtmlLabel12
             // 
@@ -1711,6 +1712,7 @@ namespace Project_Manegement_System_KMC_Water
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FilterCustomization";
@@ -1773,7 +1775,7 @@ namespace Project_Manegement_System_KMC_Water
         public Guna.UI2.WinForms.Guna2ToggleSwitch ToggleSwitchStartDateAll;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2Button btnSelectedProgressStatusUnderWork;
-        private Guna.UI2.WinForms.Guna2Button btnSelectedProgressStatusNotStarted;
+        public Guna.UI2.WinForms.Guna2Button btnSelectedProgressStatusNotStarted;
         private Guna.UI2.WinForms.Guna2Button btnSelectedProgressStatusCompleted;
         public Guna.UI2.WinForms.Guna2ToggleSwitch ToggleSwitchSectionAll;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
@@ -1790,11 +1792,11 @@ namespace Project_Manegement_System_KMC_Water
         public Guna.UI2.WinForms.Guna2ToggleSwitch ToggleSwitchProgressHistory;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        public Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
+        public Guna.UI2.WinForms.Guna2ToggleSwitch ToggleSwitchProductionDateAll;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker MaximumProductionDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker MinimumProductionDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;

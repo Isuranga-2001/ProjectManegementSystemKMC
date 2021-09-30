@@ -18,6 +18,8 @@ namespace Project_Manegement_System_KMC_Water
         }
         SQLFunctions sqlFunctions = new SQLFunctions();
 
+        public bool CloseParentForm = false;
+
         private void SelectExpenditureHead_Load(object sender, EventArgs e)
         {
             UpdateDatGridView();
@@ -48,14 +50,9 @@ namespace Project_Manegement_System_KMC_Water
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)
-        {/*
-            Settings form = new Settings();            
-            form.btnEditData.Checked = true;
-            form.btnEditDataEH.Checked = true; 
-            form.BeforeLoad();
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.ShowDialog();
-            UpdateDatGridView();*/
+        {
+            CloseParentForm = true;
+            this.Close();
         }
     }
 }

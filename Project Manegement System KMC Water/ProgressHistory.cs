@@ -58,6 +58,9 @@ namespace Project_Manegement_System_KMC_Water
             UpDownDateYear.Value = DateTime.Now.Year;
             UpDownDateMonth.Value = DateTime.Now.Month;
             UpDownDateDay.Value = DateTime.Now.Day;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.ClientSize = new Size(1280, 720);
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
@@ -371,7 +374,7 @@ namespace Project_Manegement_System_KMC_Water
         }
 
         void ShowAllDetails(string ResultsType)
-        {
+        {/*
             if (DemoTable.Columns.Count > 0 && DataGridViewProgressHistory.Rows.Count - 1 > 0) 
             {
                 DemoTable.Columns.Add("Progress", "Progress");
@@ -420,7 +423,7 @@ namespace Project_Manegement_System_KMC_Water
 
                ChBEstName.Checked = ChBStartDate.Checked = ChBEstMoney.Checked = ChBZone.Checked = 
                     ChBPermission.Checked = ChBMOE.Checked = ChBEH.Checked = ChBDescription.Checked = false;
-            }
+            }*/
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -447,61 +450,6 @@ namespace Project_Manegement_System_KMC_Water
             form.btnHistory.Visible = false;
             form.ShowDialog();
             FilterProgressHistory();
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            DashBoard form = new DashBoard();
-            form.Show();
-            this.Close();
-        }
-
-        private void btnAddNew_Click(object sender, EventArgs e)
-        {
-            AddNew form = new AddNew();
-            form.Show();
-            this.Hide();
-        }
-
-        private void btnProgress_Click(object sender, EventArgs e)
-        {
-            Progress form = new Progress();
-            form.Show();
-            this.Hide();
-        }
-
-        private void btnFilterForm_Click(object sender, EventArgs e)
-        {
-            Filter form = new Filter();
-            form.Show();
-            this.Hide();
-        }
-
-        private void btnEditData_Click(object sender, EventArgs e)
-        {/*
-            EditData form = new EditData();
-            form.Show();
-            this.Hide();*/
-        }
-
-        private void btnSettings_Click(object sender, EventArgs e)
-        {/*
-            Settings form = new Settings();
-            form.BeforeLoad();
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.ShowDialog();*/
-        }
-
-        private void btnSignOut_Click(object sender, EventArgs e)
-        {
-            Login form = new Login();
-            form.Show();
-            this.Close();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            multiFunctions.SignOut(this);
         }
 
         private void UpDownDateMonth_ValueChanged(object sender, EventArgs e)
@@ -546,6 +494,17 @@ namespace Project_Manegement_System_KMC_Water
                 UpdateDataGridViewFromQuary("SELECT * FROM ProgressOfProject " +
                     "WHERE Date LIKE'" + DateTime.Now.Year.ToString() + "-%'");
             }
+        }
+
+        private void FormNavigationButton_Click(object sender, EventArgs e)
+        {
+            Guna2CircleButton btnNavigation = (Guna2CircleButton)sender;
+            multiFunctions.NavigateTo(btnNavigation.Tag.ToString(), this);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            multiFunctions.NavigateTo(btnClose.Tag.ToString(), this);
         }
     }
 }

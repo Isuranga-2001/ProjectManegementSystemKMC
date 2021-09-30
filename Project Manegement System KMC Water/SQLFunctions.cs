@@ -84,7 +84,7 @@ namespace Project_Manegement_System_KMC_Water
                 conn.Close();
                 return null;
             }
-            catch (Exception e)
+            catch
             {
                 conn.Close();
                 return null;
@@ -115,7 +115,7 @@ namespace Project_Manegement_System_KMC_Water
                 conn.Close();
                 return true;
             }
-            catch (Exception e)
+            catch
             {
                 conn.Close();
                 return false;
@@ -136,7 +136,7 @@ namespace Project_Manegement_System_KMC_Water
                 conn.Close();
                 return Dt;
             }
-            catch (Exception e)
+            catch
             {
                 conn.Close();
                 return null;

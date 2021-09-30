@@ -289,27 +289,49 @@ namespace Project_Manegement_System_KMC_Water
             SelectExpenditureHead form = new SelectExpenditureHead();
             form.ShowDialog();
             this.Opacity = 100;
-            try
+            if (form.CloseParentForm)
             {
-                string EH = SQLRead("SELECT EH_Main,EH_Sub1,EH_Sub2,EH_Sub3 FROM dbo.ExpenditureHead WHERE (EHID='"
-                + Properties.Settings.Default.SelectedEHID + "')", "string", "EH_Main EH_Sub1 EH_Sub2 EH_Sub3");
-                if (EH == null)
-                    EH = "";
-                string[] EHParts = EH.Split();
-                txtEHMain.Text = EHParts[0];
-                txtEHSub1.Text = EHParts[1];
-                txtEHSub2.Text = EHParts[2];
-                txtEHSub3.Text = EHParts[3];
+                SettingsForm settings_form = new SettingsForm();
+                settings_form.ParentSelectedField = "EH";
+                settings_form.Show();
+                this.Close();
             }
-            catch
+            else
             {
-                txtEHMain.Text = txtEHSub1.Text = txtEHSub2.Text = txtEHSub3.Text = "";
+                try
+                {
+                    string EH = SQLRead("SELECT EH_Main,EH_Sub1,EH_Sub2,EH_Sub3 FROM dbo.ExpenditureHead WHERE (EHID='"
+                    + Properties.Settings.Default.SelectedEHID + "')", "string", "EH_Main EH_Sub1 EH_Sub2 EH_Sub3");
+                    if (EH == null)
+                        EH = "";
+                    string[] EHParts = EH.Split();
+                    txtEHMain.Text = EHParts[0];
+                    txtEHSub1.Text = EHParts[1];
+                    txtEHSub2.Text = EHParts[2];
+                    txtEHSub3.Text = EHParts[3];
+                }
+                catch
+                {
+                    txtEHMain.Text = txtEHSub1.Text = txtEHSub2.Text = txtEHSub3.Text = "";
+                }
+            }           
+        }
+
+        private void btnDropDownMenu_SelectionChanged(object sender, EventArgs e)
+        {
+            Guna2ComboBox btnDropDown = (Guna2ComboBox)sender;
+            if (btnDropDown.SelectedItem.ToString() == "Other")
+            {
+                SettingsForm form = new SettingsForm();
+                form.ParentSelectedField = "Est";
+                form.Show();
+                this.Close();
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            multiFunctions.SignOut(this);
+            multiFunctions.NavigateTo(btnClose.Tag.ToString(), this);
         }
 
         private void FormNavigationButton_Click(object sender, EventArgs e)

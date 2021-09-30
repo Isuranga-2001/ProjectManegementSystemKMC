@@ -34,6 +34,7 @@
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -42,7 +43,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblContinue = new System.Windows.Forms.LinkLabel();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
@@ -63,6 +63,7 @@
             // 
             // txtUserName
             // 
+            this.txtUserName.BackColor = System.Drawing.Color.Transparent;
             this.txtUserName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtUserName.BorderColor = System.Drawing.Color.Gray;
             this.txtUserName.BorderRadius = 24;
@@ -87,13 +88,19 @@
             this.txtUserName.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtUserName.PlaceholderText = "Username";
             this.txtUserName.SelectedText = "";
+            this.txtUserName.ShadowDecoration.BorderRadius = 24;
+            this.txtUserName.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtUserName.ShadowDecoration.Depth = 40;
+            this.txtUserName.ShadowDecoration.Enabled = true;
             this.txtUserName.ShadowDecoration.Parent = this.txtUserName;
+            this.txtUserName.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 5, 5);
             this.txtUserName.Size = new System.Drawing.Size(345, 53);
             this.txtUserName.TabIndex = 17;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPassword
             // 
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
             this.txtPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtPassword.BorderColor = System.Drawing.Color.Gray;
             this.txtPassword.BorderRadius = 24;
@@ -118,7 +125,12 @@
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
+            this.txtPassword.ShadowDecoration.BorderRadius = 24;
+            this.txtPassword.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtPassword.ShadowDecoration.Depth = 40;
+            this.txtPassword.ShadowDecoration.Enabled = true;
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
+            this.txtPassword.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 5, 5);
             this.txtPassword.Size = new System.Drawing.Size(345, 53);
             this.txtPassword.TabIndex = 18;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -127,6 +139,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
+            this.panel1.Controls.Add(this.guna2ControlBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.guna2PictureBox1);
@@ -139,6 +152,20 @@
             this.panel1.Size = new System.Drawing.Size(550, 360);
             this.panel1.TabIndex = 19;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(505, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 34;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -146,7 +173,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(22, 20);
+            this.label4.Location = new System.Drawing.Point(22, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(510, 44);
             this.label4.TabIndex = 30;
@@ -167,7 +194,7 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Water_Line_Repairing;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 84);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 98);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(550, 208);
@@ -221,7 +248,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.lblContinue);
             this.panel2.Controls.Add(this.lblLogin);
             this.panel2.Controls.Add(this.btnabout);
@@ -244,21 +270,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 34;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
-            this.btnClose.HoverState.IconColor = System.Drawing.Color.White;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(476, 91);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(45, 29);
-            this.btnClose.TabIndex = 23;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblContinue
             // 
@@ -294,6 +305,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Animated = true;
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.BorderRadius = 24;
             this.btnLogin.CheckedState.Parent = this.btnLogin;
@@ -308,7 +320,12 @@
             this.btnLogin.HoverState.Parent = this.btnLogin;
             this.btnLogin.Location = new System.Drawing.Point(105, 208);
             this.btnLogin.Name = "btnLogin";
+            this.btnLogin.ShadowDecoration.BorderRadius = 24;
+            this.btnLogin.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btnLogin.ShadowDecoration.Depth = 40;
+            this.btnLogin.ShadowDecoration.Enabled = true;
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
+            this.btnLogin.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 5, 5);
             this.btnLogin.Size = new System.Drawing.Size(345, 53);
             this.btnLogin.TabIndex = 19;
             this.btnLogin.Text = "Login";
@@ -327,12 +344,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(550, 720);
+            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -359,11 +376,11 @@
         private System.Windows.Forms.LinkLabel lblContinue;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2AnimateWindow LoadingAnimation;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }
 

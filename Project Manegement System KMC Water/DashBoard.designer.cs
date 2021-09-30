@@ -54,6 +54,10 @@ namespace Project_Manegement_System_KMC_Water
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.PanelTitle = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ChartSummeryOFProjectByZone = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblNoP = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTitleYearNoP = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -61,11 +65,22 @@ namespace Project_Manegement_System_KMC_Water
             this.lblTitleYearTotalMoney = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ChartProductionTimeLine = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2CircleButton10 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton7 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2CircleButton8 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnSettings = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton9 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CircleButton6 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.ChartBudget = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -84,23 +99,9 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LoadingAnimation = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.ContextMenuStrip_CostAndIncome = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.PanelTitle = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton10 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton7 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton8 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnSettings = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton9 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton6 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.NonCumulate = new System.Windows.Forms.ToolStripMenuItem();
             this.Cumulate = new System.Windows.Forms.ToolStripMenuItem();
+            this.PanelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartSummeryOFProjectByZone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartProductionTimeLine)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -117,13 +118,68 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.ContextMenuStrip_CostAndIncome.SuspendLayout();
-            this.PanelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // DragControl
             // 
             this.DragControl.ContainerControl = this;
             this.DragControl.TargetControl = this.PanelTitle;
+            // 
+            // PanelTitle
+            // 
+            this.PanelTitle.BackColor = System.Drawing.Color.Gainsboro;
+            this.PanelTitle.Controls.Add(this.label4);
+            this.PanelTitle.Controls.Add(this.guna2ControlBox1);
+            this.PanelTitle.Controls.Add(this.btnClose);
+            this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTitle.Location = new System.Drawing.Point(0, 0);
+            this.PanelTitle.Name = "PanelTitle";
+            this.PanelTitle.Size = new System.Drawing.Size(1278, 30);
+            this.PanelTitle.TabIndex = 168;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.label4.Location = new System.Drawing.Point(10, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(513, 18);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "KMC - Project Manegement System - Water Department  | Water Production";
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1188, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.PressedColor = System.Drawing.Color.Teal;
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
+            this.guna2ControlBox1.TabIndex = 49;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.Red;
+            this.btnClose.HoverState.Parent = this.btnClose;
+            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.btnClose.Location = new System.Drawing.Point(1233, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.PressedColor = System.Drawing.Color.Red;
+            this.btnClose.PressedDepth = 50;
+            this.btnClose.ShadowDecoration.Parent = this.btnClose;
+            this.btnClose.Size = new System.Drawing.Size(45, 30);
+            this.btnClose.TabIndex = 48;
+            this.btnClose.Tag = "Exit";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ChartSummeryOFProjectByZone
             // 
@@ -336,6 +392,35 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Panel2.Size = new System.Drawing.Size(72, 688);
             this.guna2Panel2.TabIndex = 159;
             // 
+            // guna2CircleButton4
+            // 
+            this.guna2CircleButton4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton4.Checked = true;
+            this.guna2CircleButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.guna2CircleButton4.CheckedState.Parent = this.guna2CircleButton4;
+            this.guna2CircleButton4.CustomImages.Parent = this.guna2CircleButton4;
+            this.guna2CircleButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton4.DisabledState.Parent = this.guna2CircleButton4;
+            this.guna2CircleButton4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.guna2CircleButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton4.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton4.HoverState.Parent = this.guna2CircleButton4;
+            this.guna2CircleButton4.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Dashboard_03_Lavender;
+            this.guna2CircleButton4.ImageSize = new System.Drawing.Size(24, 24);
+            this.guna2CircleButton4.Location = new System.Drawing.Point(9, 15);
+            this.guna2CircleButton4.Name = "guna2CircleButton4";
+            this.guna2CircleButton4.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CircleButton4.ShadowDecoration.Depth = 40;
+            this.guna2CircleButton4.ShadowDecoration.Enabled = true;
+            this.guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton4.ShadowDecoration.Parent = this.guna2CircleButton4;
+            this.guna2CircleButton4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 5, 5);
+            this.guna2CircleButton4.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleButton4.TabIndex = 90;
+            // 
             // guna2Separator6
             // 
             this.guna2Separator6.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -356,6 +441,61 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Separator4.Size = new System.Drawing.Size(55, 13);
             this.guna2Separator4.TabIndex = 95;
             // 
+            // guna2CircleButton10
+            // 
+            this.guna2CircleButton10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton10.CheckedState.Parent = this.guna2CircleButton10;
+            this.guna2CircleButton10.CustomImages.Parent = this.guna2CircleButton10;
+            this.guna2CircleButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton10.DisabledState.Parent = this.guna2CircleButton10;
+            this.guna2CircleButton10.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton10.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton10.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.guna2CircleButton10.HoverState.Parent = this.guna2CircleButton10;
+            this.guna2CircleButton10.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Distribution_01_Blue_01;
+            this.guna2CircleButton10.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2CircleButton10.Location = new System.Drawing.Point(9, 480);
+            this.guna2CircleButton10.Name = "guna2CircleButton10";
+            this.guna2CircleButton10.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.guna2CircleButton10.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton10.ShadowDecoration.Parent = this.guna2CircleButton10;
+            this.guna2CircleButton10.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleButton10.TabIndex = 103;
+            this.guna2CircleButton10.Tag = "Distribution";
+            this.guna2CircleButton10.Click += new System.EventHandler(this.btnNavigation_Click);
+            // 
+            // guna2CircleButton7
+            // 
+            this.guna2CircleButton7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton7.CheckedState.Parent = this.guna2CircleButton7;
+            this.guna2CircleButton7.CustomImages.Parent = this.guna2CircleButton7;
+            this.guna2CircleButton7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton7.DisabledState.Parent = this.guna2CircleButton7;
+            this.guna2CircleButton7.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton7.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton7.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.guna2CircleButton7.HoverState.Parent = this.guna2CircleButton7;
+            this.guna2CircleButton7.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Water_01_Blue_01;
+            this.guna2CircleButton7.ImageOffset = new System.Drawing.Point(1, 0);
+            this.guna2CircleButton7.ImageSize = new System.Drawing.Size(18, 25);
+            this.guna2CircleButton7.Location = new System.Drawing.Point(9, 419);
+            this.guna2CircleButton7.Name = "guna2CircleButton7";
+            this.guna2CircleButton7.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.guna2CircleButton7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton7.ShadowDecoration.Parent = this.guna2CircleButton7;
+            this.guna2CircleButton7.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleButton7.TabIndex = 102;
+            this.guna2CircleButton7.Tag = "WaterProduction";
+            this.guna2CircleButton7.Click += new System.EventHandler(this.btnNavigation_Click);
+            // 
             // guna2Separator5
             // 
             this.guna2Separator5.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -365,6 +505,190 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Separator5.Name = "guna2Separator5";
             this.guna2Separator5.Size = new System.Drawing.Size(55, 13);
             this.guna2Separator5.TabIndex = 96;
+            // 
+            // guna2CircleButton8
+            // 
+            this.guna2CircleButton8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton8.CheckedState.Parent = this.guna2CircleButton8;
+            this.guna2CircleButton8.CustomImages.Parent = this.guna2CircleButton8;
+            this.guna2CircleButton8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton8.DisabledState.Parent = this.guna2CircleButton8;
+            this.guna2CircleButton8.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton8.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton8.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.guna2CircleButton8.HoverState.Parent = this.guna2CircleButton8;
+            this.guna2CircleButton8.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.SignOut_01_Blue_01;
+            this.guna2CircleButton8.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2CircleButton8.Location = new System.Drawing.Point(9, 621);
+            this.guna2CircleButton8.Name = "guna2CircleButton8";
+            this.guna2CircleButton8.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton8.ShadowDecoration.Parent = this.guna2CircleButton8;
+            this.guna2CircleButton8.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleButton8.TabIndex = 94;
+            this.guna2CircleButton8.Tag = "LogOut";
+            this.guna2CircleButton8.Click += new System.EventHandler(this.btnNavigation_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.CheckedState.Parent = this.btnSettings;
+            this.btnSettings.CustomImages.Parent = this.btnSettings;
+            this.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSettings.DisabledState.Parent = this.btnSettings;
+            this.btnSettings.FillColor = System.Drawing.Color.Transparent;
+            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.btnSettings.HoverState.Parent = this.btnSettings;
+            this.btnSettings.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Settings_01_Blue_01;
+            this.btnSettings.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnSettings.Location = new System.Drawing.Point(9, 560);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
+            this.btnSettings.Size = new System.Drawing.Size(55, 55);
+            this.btnSettings.TabIndex = 93;
+            this.btnSettings.Tag = "Settings";
+            this.btnSettings.Click += new System.EventHandler(this.btnNavigation_Click);
+            // 
+            // guna2CircleButton9
+            // 
+            this.guna2CircleButton9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton9.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(211)))), ((int)(((byte)(255)))));
+            this.guna2CircleButton9.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(211)))), ((int)(((byte)(255)))));
+            this.guna2CircleButton9.CheckedState.Parent = this.guna2CircleButton9;
+            this.guna2CircleButton9.CustomImages.Parent = this.guna2CircleButton9;
+            this.guna2CircleButton9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton9.DisabledState.Parent = this.guna2CircleButton9;
+            this.guna2CircleButton9.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton9.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton9.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.guna2CircleButton9.HoverState.Parent = this.guna2CircleButton9;
+            this.guna2CircleButton9.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Filter_02_Blue_01_png;
+            this.guna2CircleButton9.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2CircleButton9.Location = new System.Drawing.Point(9, 76);
+            this.guna2CircleButton9.Name = "guna2CircleButton9";
+            this.guna2CircleButton9.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton9.ShadowDecoration.Parent = this.guna2CircleButton9;
+            this.guna2CircleButton9.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleButton9.TabIndex = 87;
+            this.guna2CircleButton9.Tag = "Filter";
+            this.guna2CircleButton9.Click += new System.EventHandler(this.btnNavigation_Click);
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.DisabledState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.History_01_Blue_01;
+            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(9, 278);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleButton1.TabIndex = 92;
+            this.guna2CircleButton1.Tag = "ProgressHistory";
+            this.guna2CircleButton1.Click += new System.EventHandler(this.btnNavigation_Click);
+            // 
+            // guna2CircleButton5
+            // 
+            this.guna2CircleButton5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton5.CheckedState.Parent = this.guna2CircleButton5;
+            this.guna2CircleButton5.CustomImages.Parent = this.guna2CircleButton5;
+            this.guna2CircleButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton5.DisabledState.Parent = this.guna2CircleButton5;
+            this.guna2CircleButton5.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton5.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton5.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.guna2CircleButton5.HoverState.Parent = this.guna2CircleButton5;
+            this.guna2CircleButton5.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Edit_02_Blue_01;
+            this.guna2CircleButton5.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2CircleButton5.Location = new System.Drawing.Point(9, 339);
+            this.guna2CircleButton5.Name = "guna2CircleButton5";
+            this.guna2CircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton5.ShadowDecoration.Parent = this.guna2CircleButton5;
+            this.guna2CircleButton5.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleButton5.TabIndex = 91;
+            this.guna2CircleButton5.Tag = "Edit";
+            this.guna2CircleButton5.Click += new System.EventHandler(this.btnNavigation_Click);
+            // 
+            // guna2CircleButton3
+            // 
+            this.guna2CircleButton3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton3.CheckedState.Parent = this.guna2CircleButton3;
+            this.guna2CircleButton3.CustomImages.Parent = this.guna2CircleButton3;
+            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton3.DisabledState.Parent = this.guna2CircleButton3;
+            this.guna2CircleButton3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton3.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.guna2CircleButton3.HoverState.Parent = this.guna2CircleButton3;
+            this.guna2CircleButton3.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Progress_01_Blue_01;
+            this.guna2CircleButton3.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2CircleButton3.Location = new System.Drawing.Point(9, 217);
+            this.guna2CircleButton3.Name = "guna2CircleButton3";
+            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton3.ShadowDecoration.Parent = this.guna2CircleButton3;
+            this.guna2CircleButton3.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleButton3.TabIndex = 89;
+            this.guna2CircleButton3.Tag = "Progress";
+            this.guna2CircleButton3.Click += new System.EventHandler(this.btnNavigation_Click);
+            // 
+            // guna2CircleButton2
+            // 
+            this.guna2CircleButton2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton2.CheckedState.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.CustomImages.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton2.DisabledState.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton2.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.guna2CircleButton2.HoverState.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Add_01_Blue_01;
+            this.guna2CircleButton2.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(9, 156);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(55, 55);
+            this.guna2CircleButton2.TabIndex = 88;
+            this.guna2CircleButton2.Tag = "Add";
+            this.guna2CircleButton2.Click += new System.EventHandler(this.btnNavigation_Click);
             // 
             // guna2Panel1
             // 
@@ -400,6 +724,31 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Panel4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 3, 3);
             this.guna2Panel4.Size = new System.Drawing.Size(475, 509);
             this.guna2Panel4.TabIndex = 163;
+            // 
+            // guna2CircleButton6
+            // 
+            this.guna2CircleButton6.CheckedState.Parent = this.guna2CircleButton6;
+            this.guna2CircleButton6.CustomImages.Parent = this.guna2CircleButton6;
+            this.guna2CircleButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton6.DisabledState.Parent = this.guna2CircleButton6;
+            this.guna2CircleButton6.FillColor = System.Drawing.Color.White;
+            this.guna2CircleButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton6.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton6.HoverState.FillColor = System.Drawing.Color.Lavender;
+            this.guna2CircleButton6.HoverState.Parent = this.guna2CircleButton6;
+            this.guna2CircleButton6.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Menu_Icon;
+            this.guna2CircleButton6.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2CircleButton6.Location = new System.Drawing.Point(426, 12);
+            this.guna2CircleButton6.Name = "guna2CircleButton6";
+            this.guna2CircleButton6.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.guna2CircleButton6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton6.ShadowDecoration.Parent = this.guna2CircleButton6;
+            this.guna2CircleButton6.Size = new System.Drawing.Size(36, 36);
+            this.guna2CircleButton6.TabIndex = 33;
+            this.guna2CircleButton6.Click += new System.EventHandler(this.btnCostAndIncomeChartType_Click);
             // 
             // ChartBudget
             // 
@@ -751,337 +1100,6 @@ namespace Project_Manegement_System_KMC_Water
             this.ContextMenuStrip_CostAndIncome.Size = new System.Drawing.Size(182, 48);
             this.ContextMenuStrip_CostAndIncome.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ContextMenuStrip_CostAndIncome_ItemClicked);
             // 
-            // PanelTitle
-            // 
-            this.PanelTitle.BackColor = System.Drawing.Color.Gainsboro;
-            this.PanelTitle.Controls.Add(this.label4);
-            this.PanelTitle.Controls.Add(this.guna2ControlBox1);
-            this.PanelTitle.Controls.Add(this.btnClose);
-            this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTitle.Location = new System.Drawing.Point(0, 0);
-            this.PanelTitle.Name = "PanelTitle";
-            this.PanelTitle.Size = new System.Drawing.Size(1278, 30);
-            this.PanelTitle.TabIndex = 168;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            this.label4.Location = new System.Drawing.Point(10, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(513, 18);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "KMC - Project Manegement System - Water Department  | Water Production";
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1188, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.PressedColor = System.Drawing.Color.Teal;
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
-            this.guna2ControlBox1.TabIndex = 49;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.HoverState.FillColor = System.Drawing.Color.Red;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            this.btnClose.Location = new System.Drawing.Point(1233, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PressedColor = System.Drawing.Color.Red;
-            this.btnClose.PressedDepth = 50;
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(45, 30);
-            this.btnClose.TabIndex = 48;
-            // 
-            // guna2CircleButton4
-            // 
-            this.guna2CircleButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton4.Checked = true;
-            this.guna2CircleButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            this.guna2CircleButton4.CheckedState.Parent = this.guna2CircleButton4;
-            this.guna2CircleButton4.CustomImages.Parent = this.guna2CircleButton4;
-            this.guna2CircleButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton4.DisabledState.Parent = this.guna2CircleButton4;
-            this.guna2CircleButton4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            this.guna2CircleButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton4.HoverState.Parent = this.guna2CircleButton4;
-            this.guna2CircleButton4.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Dashboard_03_Lavender;
-            this.guna2CircleButton4.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2CircleButton4.Location = new System.Drawing.Point(9, 15);
-            this.guna2CircleButton4.Name = "guna2CircleButton4";
-            this.guna2CircleButton4.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CircleButton4.ShadowDecoration.Depth = 40;
-            this.guna2CircleButton4.ShadowDecoration.Enabled = true;
-            this.guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton4.ShadowDecoration.Parent = this.guna2CircleButton4;
-            this.guna2CircleButton4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 5, 5);
-            this.guna2CircleButton4.Size = new System.Drawing.Size(55, 55);
-            this.guna2CircleButton4.TabIndex = 90;
-            // 
-            // guna2CircleButton10
-            // 
-            this.guna2CircleButton10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton10.CheckedState.Parent = this.guna2CircleButton10;
-            this.guna2CircleButton10.CustomImages.Parent = this.guna2CircleButton10;
-            this.guna2CircleButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton10.DisabledState.Parent = this.guna2CircleButton10;
-            this.guna2CircleButton10.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton10.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton10.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton10.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.guna2CircleButton10.HoverState.Parent = this.guna2CircleButton10;
-            this.guna2CircleButton10.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Distribution_01_Blue_01;
-            this.guna2CircleButton10.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton10.Location = new System.Drawing.Point(9, 480);
-            this.guna2CircleButton10.Name = "guna2CircleButton10";
-            this.guna2CircleButton10.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            this.guna2CircleButton10.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton10.ShadowDecoration.Parent = this.guna2CircleButton10;
-            this.guna2CircleButton10.Size = new System.Drawing.Size(55, 55);
-            this.guna2CircleButton10.TabIndex = 103;
-            this.guna2CircleButton10.Tag = "Distribution";
-            // 
-            // guna2CircleButton7
-            // 
-            this.guna2CircleButton7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton7.CheckedState.Parent = this.guna2CircleButton7;
-            this.guna2CircleButton7.CustomImages.Parent = this.guna2CircleButton7;
-            this.guna2CircleButton7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton7.DisabledState.Parent = this.guna2CircleButton7;
-            this.guna2CircleButton7.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton7.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton7.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.guna2CircleButton7.HoverState.Parent = this.guna2CircleButton7;
-            this.guna2CircleButton7.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Water_01_Blue_01;
-            this.guna2CircleButton7.ImageOffset = new System.Drawing.Point(1, 0);
-            this.guna2CircleButton7.ImageSize = new System.Drawing.Size(18, 25);
-            this.guna2CircleButton7.Location = new System.Drawing.Point(9, 419);
-            this.guna2CircleButton7.Name = "guna2CircleButton7";
-            this.guna2CircleButton7.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            this.guna2CircleButton7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton7.ShadowDecoration.Parent = this.guna2CircleButton7;
-            this.guna2CircleButton7.Size = new System.Drawing.Size(55, 55);
-            this.guna2CircleButton7.TabIndex = 102;
-            this.guna2CircleButton7.Tag = "WaterProduction";
-            // 
-            // guna2CircleButton8
-            // 
-            this.guna2CircleButton8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton8.CheckedState.Parent = this.guna2CircleButton8;
-            this.guna2CircleButton8.CustomImages.Parent = this.guna2CircleButton8;
-            this.guna2CircleButton8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton8.DisabledState.Parent = this.guna2CircleButton8;
-            this.guna2CircleButton8.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton8.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton8.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.guna2CircleButton8.HoverState.Parent = this.guna2CircleButton8;
-            this.guna2CircleButton8.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.SignOut_01_Blue_01;
-            this.guna2CircleButton8.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton8.Location = new System.Drawing.Point(9, 621);
-            this.guna2CircleButton8.Name = "guna2CircleButton8";
-            this.guna2CircleButton8.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton8.ShadowDecoration.Parent = this.guna2CircleButton8;
-            this.guna2CircleButton8.Size = new System.Drawing.Size(55, 55);
-            this.guna2CircleButton8.TabIndex = 94;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
-            this.btnSettings.CheckedState.Parent = this.btnSettings;
-            this.btnSettings.CustomImages.Parent = this.btnSettings;
-            this.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSettings.DisabledState.Parent = this.btnSettings;
-            this.btnSettings.FillColor = System.Drawing.Color.Transparent;
-            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.btnSettings.HoverState.Parent = this.btnSettings;
-            this.btnSettings.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Settings_01_Blue_01;
-            this.btnSettings.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnSettings.Location = new System.Drawing.Point(9, 560);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
-            this.btnSettings.Size = new System.Drawing.Size(55, 55);
-            this.btnSettings.TabIndex = 93;
-            // 
-            // guna2CircleButton9
-            // 
-            this.guna2CircleButton9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton9.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(211)))), ((int)(((byte)(255)))));
-            this.guna2CircleButton9.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(211)))), ((int)(((byte)(255)))));
-            this.guna2CircleButton9.CheckedState.Parent = this.guna2CircleButton9;
-            this.guna2CircleButton9.CustomImages.Parent = this.guna2CircleButton9;
-            this.guna2CircleButton9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton9.DisabledState.Parent = this.guna2CircleButton9;
-            this.guna2CircleButton9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton9.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton9.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.guna2CircleButton9.HoverState.Parent = this.guna2CircleButton9;
-            this.guna2CircleButton9.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Filter_02_Blue_01_png;
-            this.guna2CircleButton9.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton9.Location = new System.Drawing.Point(9, 76);
-            this.guna2CircleButton9.Name = "guna2CircleButton9";
-            this.guna2CircleButton9.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton9.ShadowDecoration.Parent = this.guna2CircleButton9;
-            this.guna2CircleButton9.Size = new System.Drawing.Size(55, 55);
-            this.guna2CircleButton9.TabIndex = 87;
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.DisabledState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.History_01_Blue_01;
-            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(9, 278);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(55, 55);
-            this.guna2CircleButton1.TabIndex = 92;
-            // 
-            // guna2CircleButton5
-            // 
-            this.guna2CircleButton5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton5.CheckedState.Parent = this.guna2CircleButton5;
-            this.guna2CircleButton5.CustomImages.Parent = this.guna2CircleButton5;
-            this.guna2CircleButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton5.DisabledState.Parent = this.guna2CircleButton5;
-            this.guna2CircleButton5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton5.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.guna2CircleButton5.HoverState.Parent = this.guna2CircleButton5;
-            this.guna2CircleButton5.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Edit_02_Blue_01;
-            this.guna2CircleButton5.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton5.Location = new System.Drawing.Point(9, 339);
-            this.guna2CircleButton5.Name = "guna2CircleButton5";
-            this.guna2CircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton5.ShadowDecoration.Parent = this.guna2CircleButton5;
-            this.guna2CircleButton5.Size = new System.Drawing.Size(55, 55);
-            this.guna2CircleButton5.TabIndex = 91;
-            // 
-            // guna2CircleButton3
-            // 
-            this.guna2CircleButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton3.CheckedState.Parent = this.guna2CircleButton3;
-            this.guna2CircleButton3.CustomImages.Parent = this.guna2CircleButton3;
-            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton3.DisabledState.Parent = this.guna2CircleButton3;
-            this.guna2CircleButton3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton3.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.guna2CircleButton3.HoverState.Parent = this.guna2CircleButton3;
-            this.guna2CircleButton3.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Progress_01_Blue_01;
-            this.guna2CircleButton3.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton3.Location = new System.Drawing.Point(9, 217);
-            this.guna2CircleButton3.Name = "guna2CircleButton3";
-            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton3.ShadowDecoration.Parent = this.guna2CircleButton3;
-            this.guna2CircleButton3.Size = new System.Drawing.Size(55, 55);
-            this.guna2CircleButton3.TabIndex = 89;
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton2.CheckedState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.CustomImages.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton2.DisabledState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.guna2CircleButton2.HoverState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Add_01_Blue_01;
-            this.guna2CircleButton2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton2.Location = new System.Drawing.Point(9, 156);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(55, 55);
-            this.guna2CircleButton2.TabIndex = 88;
-            // 
-            // guna2CircleButton6
-            // 
-            this.guna2CircleButton6.CheckedState.Parent = this.guna2CircleButton6;
-            this.guna2CircleButton6.CustomImages.Parent = this.guna2CircleButton6;
-            this.guna2CircleButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton6.DisabledState.Parent = this.guna2CircleButton6;
-            this.guna2CircleButton6.FillColor = System.Drawing.Color.White;
-            this.guna2CircleButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton6.HoverState.FillColor = System.Drawing.Color.Lavender;
-            this.guna2CircleButton6.HoverState.Parent = this.guna2CircleButton6;
-            this.guna2CircleButton6.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Menu_Icon;
-            this.guna2CircleButton6.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2CircleButton6.Location = new System.Drawing.Point(426, 12);
-            this.guna2CircleButton6.Name = "guna2CircleButton6";
-            this.guna2CircleButton6.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            this.guna2CircleButton6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton6.ShadowDecoration.Parent = this.guna2CircleButton6;
-            this.guna2CircleButton6.Size = new System.Drawing.Size(36, 36);
-            this.guna2CircleButton6.TabIndex = 33;
-            this.guna2CircleButton6.Click += new System.EventHandler(this.btnCostAndIncomeChartType_Click);
-            // 
             // NonCumulate
             // 
             this.NonCumulate.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1126,6 +1144,8 @@ namespace Project_Manegement_System_KMC_Water
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DashBoard_FormClosing);
             this.Load += new System.EventHandler(this.DashBoard_Load);
+            this.PanelTitle.ResumeLayout(false);
+            this.PanelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartSummeryOFProjectByZone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartProductionTimeLine)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
@@ -1147,8 +1167,6 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Panel10.ResumeLayout(false);
             this.guna2Panel10.PerformLayout();
             this.ContextMenuStrip_CostAndIncome.ResumeLayout(false);
-            this.PanelTitle.ResumeLayout(false);
-            this.PanelTitle.PerformLayout();
             this.ResumeLayout(false);
 
         }

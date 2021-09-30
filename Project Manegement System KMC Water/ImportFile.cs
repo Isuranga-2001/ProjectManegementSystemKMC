@@ -50,52 +50,64 @@ namespace Project_Manegement_System_KMC_Water
                         {
                             try
                             {
-                                int Index;
-                                string OptimiziedImportedDataRow;
-                                foreach (string ImportedDataRow in File.ReadAllLines(ofd.FileName))
+                                bool IsDeleteErrorColumns = true;
+                                string[] FirstLineOfFile = File.ReadAllLines(ofd.FileName)[0].Split(',');
+
+                                if (FirstLineOfFile[1] == "" || FirstLineOfFile[2] == "" || FirstLineOfFile[3] == "") 
                                 {
-                                    OptimiziedImportedDataRow = ImportedDataRow.Replace("GALAWATTA LANE, EGODMULLA", "GALAWATTA LANE EGODMULLA");
-                                    Index = 0;
-                                    
-                                    foreach (string CellValue in OptimiziedImportedDataRow.Split(','))
-                                    {
-                                        // set column names
-                                        if (FilteredDataTable.Columns.Count < 3)
-                                        {
-                                            foreach (string ImportantColumnsName in ListImportantColumnsNames)
-                                            {
-                                                // check value of cell in first row equal to important column name 
-                                                if (CellValue.Trim() == ImportantColumnsName)
-                                                {
-                                                    // add new column in filtered datatable
-                                                    FilteredDataTable.Columns.Add(CellValue.Trim());
+                                    IsDeleteErrorColumns = false;
+                                    MessageBox.Show("Did not remove Name,Adress Coluumn in Selected file." +
+                                        " You should delete Name,Address Columns in selected file to continue",
+                                        "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
 
-                                                    // add index to paralleldictionary
-                                                    ParallelIndexOfImportantColumnNames.Add(CellValue.Trim(), Index);
-                                                    break;
+                                if (IsDeleteErrorColumns)
+                                {
+                                    int Index;
+                                    foreach (string ImportedDataRow in File.ReadAllLines(ofd.FileName))
+                                    {
+                                        Index = 0;
+
+                                        foreach (string CellValue in ImportedDataRow.Split(','))
+                                        {
+                                            // set column names
+                                            if (FilteredDataTable.Columns.Count < 3)
+                                            {
+                                                foreach (string ImportantColumnsName in ListImportantColumnsNames)
+                                                {
+                                                    // check value of cell in first row equal to important column name 
+                                                    if (CellValue.Trim() == ImportantColumnsName)
+                                                    {
+                                                        // add new column in filtered datatable
+                                                        FilteredDataTable.Columns.Add(CellValue.Trim());
+
+                                                        // add index to paralleldictionary
+                                                        ParallelIndexOfImportantColumnNames.Add(CellValue.Trim(), Index);
+                                                        break;
+                                                    }
                                                 }
                                             }
-                                        }
-                                        else
-                                        {
-                                            foreach (KeyValuePair<string, int> SelectedIndex in ParallelIndexOfImportantColumnNames)
+                                            else
                                             {
-                                                if (Index == SelectedIndex.Value)
+                                                foreach (KeyValuePair<string, int> SelectedIndex in ParallelIndexOfImportantColumnNames)
                                                 {
-                                                    ValuesToAddDataTable.Add(CellValue);
+                                                    if (Index == SelectedIndex.Value)
+                                                    {
+                                                        ValuesToAddDataTable.Add(CellValue);
+                                                    }
                                                 }
                                             }
+                                            Index += 1;
                                         }
-                                        Index += 1;
-                                    }
 
-                                    if (ValuesToAddDataTable.Count == 3)
-                                    {
-                                        FilteredDataTable.Rows.Add(ValuesToAddDataTable[0].Trim(), 
-                                            ValuesToAddDataTable[1].Trim(), ValuesToAddDataTable[2].Trim());
+                                        if (ValuesToAddDataTable.Count == 3)
+                                        {
+                                            FilteredDataTable.Rows.Add(ValuesToAddDataTable[0].Trim(),
+                                                ValuesToAddDataTable[1].Trim(), ValuesToAddDataTable[2].Trim());
 
+                                        }
+                                        ValuesToAddDataTable = new List<string> { };
                                     }
-                                    ValuesToAddDataTable = new List<string> { };
                                 }
                             }
                             catch (Exception exc)
@@ -148,7 +160,7 @@ namespace Project_Manegement_System_KMC_Water
 
         private void btnImport_Click(object sender, EventArgs e)
         {            
-            if (DataGridViewImportData.Rows.Count - 1 > 0 && !this.UseWaitCursor)
+            if (DataGridViewImportData.Rows.Count > 0 && !this.UseWaitCursor)
             {
                 this.UseWaitCursor = true;
 
@@ -158,7 +170,15 @@ namespace Project_Manegement_System_KMC_Water
                         " If you want to remove updated data and import again", "Database is Up to date",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        PassImportantDataToImportDataMethod();
+                        string[] RelatedMonth = txtReletedDate.Tag.ToString().Split('-');
+                        string SelectedMonth = Convert.ToInt32(RelatedMonth[1]).ToString();
+                        if (SelectedMonth == "13")
+                            SelectedMonth = "1";
+
+                        if (sqlFunctions.ExecuteSQL(String.Format("DELETE FROM Consumption WHERE Month={0}", RelatedMonth[0] + "-" + SelectedMonth))) 
+                        {
+                            PassImportantDataToImportDataMethod();
+                        }
                     }
                 }
                 else
@@ -261,9 +281,9 @@ namespace Project_Manegement_System_KMC_Water
                     }
 
                     ImportingDataProgressBar.Value += 1;
-
+                    /*
                     if (i == 100)
-                        break;
+                        break;*/
 
                 }
 
@@ -313,7 +333,7 @@ namespace Project_Manegement_System_KMC_Water
             }            
         }
 
-        void ChangeReletedMonth(int SelectedYear,int SelectedMonth)
+        void ChangeReletedMonth(int SelectedYear, int SelectedMonth)
         {
             txtReletedDate.Text = SelectedYear + " " + MonthNames[SelectedMonth];
             txtReletedDate.Tag = SelectedYear + "-" + (SelectedMonth).ToString();

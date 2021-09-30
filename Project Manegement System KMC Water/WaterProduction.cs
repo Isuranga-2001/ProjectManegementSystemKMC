@@ -1000,7 +1000,6 @@ namespace Project_Manegement_System_KMC_Water
                     try
                     {
                         ChartProductionHistory.Series[SeriesIndex].Points.AddXY(IndexDate, AffectedDictionary[IndexDate]);
-                        int x = 0;
                     }
                     catch
                     {
@@ -1053,7 +1052,6 @@ namespace Project_Manegement_System_KMC_Water
         /// </summary>
 
         Dictionary<int, List<Guna2ProgressBar>> ListHomeProgressBars;
-
         Dictionary<int, List<Guna2HtmlLabel>> ListLabelsOfHomeProgressBarValues;
 
         void UpdateHomePageProductionValues()
@@ -1173,6 +1171,11 @@ namespace Project_Manegement_System_KMC_Water
             }
 
             txtDate.Value = DateTime.Today.AddDays(-1);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            multiFunctions.NavigateTo(btnClose.Tag.ToString(), this);
         }
     }
 }

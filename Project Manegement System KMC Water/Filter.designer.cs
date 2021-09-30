@@ -124,7 +124,7 @@ namespace Project_Manegement_System_KMC_Water
             this.label14 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.page2 = new Manina.Windows.Forms.Page();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnTranslate = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnFilter = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnSave = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -143,7 +143,15 @@ namespace Project_Manegement_System_KMC_Water
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoadingAnimation = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TranselateMenu = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.All = new System.Windows.Forms.ToolStripMenuItem();
+            this.Header = new System.Windows.Forms.ToolStripMenuItem();
+            this.Permission = new System.Windows.Forms.ToolStripMenuItem();
+            this.MOE = new System.Windows.Forms.ToolStripMenuItem();
+            this.Section = new System.Windows.Forms.ToolStripMenuItem();
+            this.TableRightClickMenu = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelTitle.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -168,6 +176,8 @@ namespace Project_Manegement_System_KMC_Water
             this.tableLayoutPanel3.SuspendLayout();
             this.page2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableResults)).BeginInit();
+            this.TranselateMenu.SuspendLayout();
+            this.TableRightClickMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelTitle
@@ -224,7 +234,8 @@ namespace Project_Manegement_System_KMC_Water
             this.BtnClose.ShadowDecoration.Parent = this.BtnClose;
             this.BtnClose.Size = new System.Drawing.Size(45, 30);
             this.BtnClose.TabIndex = 48;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            this.BtnClose.Tag = "Exit";
+            this.BtnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ChBIndexNo
             // 
@@ -1103,6 +1114,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton8.ShadowDecoration.Parent = this.guna2CircleButton8;
             this.guna2CircleButton8.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton8.TabIndex = 94;
+            this.guna2CircleButton8.Tag = "LogOut";
             this.guna2CircleButton8.Click += new System.EventHandler(this.NavigationBarButton_Click);
             // 
             // btnSettings
@@ -1128,6 +1140,7 @@ namespace Project_Manegement_System_KMC_Water
             this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
             this.btnSettings.Size = new System.Drawing.Size(55, 55);
             this.btnSettings.TabIndex = 93;
+            this.btnSettings.Tag = "Settings";
             this.btnSettings.Click += new System.EventHandler(this.NavigationBarButton_Click);
             // 
             // btnProgressHistory
@@ -1153,6 +1166,7 @@ namespace Project_Manegement_System_KMC_Water
             this.btnProgressHistory.ShadowDecoration.Parent = this.btnProgressHistory;
             this.btnProgressHistory.Size = new System.Drawing.Size(55, 55);
             this.btnProgressHistory.TabIndex = 92;
+            this.btnProgressHistory.Tag = "ProgressHistory";
             this.btnProgressHistory.Click += new System.EventHandler(this.NavigationBarButton_Click);
             // 
             // guna2CircleButton5
@@ -1178,6 +1192,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton5.ShadowDecoration.Parent = this.guna2CircleButton5;
             this.guna2CircleButton5.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton5.TabIndex = 91;
+            this.guna2CircleButton5.Tag = "Edit";
             this.guna2CircleButton5.Click += new System.EventHandler(this.NavigationBarButton_Click);
             // 
             // guna2CircleButton3
@@ -1203,6 +1218,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton3.ShadowDecoration.Parent = this.guna2CircleButton3;
             this.guna2CircleButton3.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton3.TabIndex = 89;
+            this.guna2CircleButton3.Tag = "Progress";
             this.guna2CircleButton3.Click += new System.EventHandler(this.NavigationBarButton_Click);
             // 
             // guna2CircleButton2
@@ -1228,6 +1244,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
             this.guna2CircleButton2.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton2.TabIndex = 88;
+            this.guna2CircleButton2.Tag = "Add";
             this.guna2CircleButton2.Click += new System.EventHandler(this.NavigationBarButton_Click);
             // 
             // guna2CircleButton9
@@ -1255,6 +1272,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2CircleButton9.ShadowDecoration.Parent = this.guna2CircleButton9;
             this.guna2CircleButton9.Size = new System.Drawing.Size(55, 55);
             this.guna2CircleButton9.TabIndex = 87;
+            this.guna2CircleButton9.Tag = "Dashboard";
             this.guna2CircleButton9.Click += new System.EventHandler(this.NavigationBarButton_Click);
             // 
             // pagedControl1
@@ -1572,7 +1590,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // page2
             // 
-            this.page2.Controls.Add(this.guna2ImageButton1);
+            this.page2.Controls.Add(this.btnTranslate);
             this.page2.Controls.Add(this.btnBack);
             this.page2.Controls.Add(this.btnFilter);
             this.page2.Controls.Add(this.btnSave);
@@ -1583,27 +1601,28 @@ namespace Project_Manegement_System_KMC_Water
             this.page2.Size = new System.Drawing.Size(1208, 690);
             this.page2.Text = "s";
             // 
-            // guna2ImageButton1
+            // btnTranslate
             // 
-            this.guna2ImageButton1.AnimatedGIF = true;
-            this.guna2ImageButton1.CheckedState.ImageRotate = 45F;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.HoverState.ImageRotate = 20F;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(31, 31);
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Translate_Blue_01;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(31, 31);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(1061, 31);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageRotate = 60F;
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(31, 31);
-            this.guna2ImageButton1.TabIndex = 175;
+            this.btnTranslate.AnimatedGIF = true;
+            this.btnTranslate.CheckedState.ImageRotate = 45F;
+            this.btnTranslate.CheckedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnTranslate.CheckedState.Parent = this.btnTranslate;
+            this.btnTranslate.HoverState.ImageRotate = 20F;
+            this.btnTranslate.HoverState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnTranslate.HoverState.Parent = this.btnTranslate;
+            this.btnTranslate.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Translate_Blue_01;
+            this.btnTranslate.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnTranslate.ImageRotate = 0F;
+            this.btnTranslate.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnTranslate.Location = new System.Drawing.Point(1061, 31);
+            this.btnTranslate.Name = "btnTranslate";
+            this.btnTranslate.PressedState.ImageRotate = 60F;
+            this.btnTranslate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnTranslate.PressedState.Parent = this.btnTranslate;
+            this.btnTranslate.ShadowDecoration.Parent = this.btnTranslate;
+            this.btnTranslate.Size = new System.Drawing.Size(31, 31);
+            this.btnTranslate.TabIndex = 175;
+            this.btnTranslate.Click += new System.EventHandler(this.btnTranslate_Click);
             // 
             // btnBack
             // 
@@ -1767,7 +1786,7 @@ namespace Project_Manegement_System_KMC_Water
             this.TableResults.ThemeStyle.RowsStyle.Height = 30;
             this.TableResults.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
             this.TableResults.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(49)))));
-            this.TableResults.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TableResults_ColumnHeaderMouseClick);
+            this.TableResults.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TableResults_CellMouseClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1847,10 +1866,99 @@ namespace Project_Manegement_System_KMC_Water
             this.LoadingAnimation.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_HOR_POSITIVE;
             this.LoadingAnimation.TargetForm = this;
             // 
-            // contextMenuStrip1
+            // TranselateMenu
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.TranselateMenu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TranselateMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TranselateMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.All,
+            this.Header,
+            this.Permission,
+            this.MOE,
+            this.Section});
+            this.TranselateMenu.Name = "TranselateMenu";
+            this.TranselateMenu.OwnerItem = this.toolStripMenuItem2;
+            this.TranselateMenu.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.TranselateMenu.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.TranselateMenu.RenderStyle.ColorTable = null;
+            this.TranselateMenu.RenderStyle.RoundedEdges = true;
+            this.TranselateMenu.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.TranselateMenu.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
+            this.TranselateMenu.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.TranselateMenu.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.TranselateMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.TranselateMenu.Size = new System.Drawing.Size(262, 114);
+            this.TranselateMenu.Tag = "Translate";
+            this.TranselateMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ItemClick);
+            // 
+            // All
+            // 
+            this.All.CheckOnClick = true;
+            this.All.Name = "All";
+            this.All.Size = new System.Drawing.Size(261, 22);
+            this.All.Text = "All";
+            // 
+            // Header
+            // 
+            this.Header.CheckOnClick = true;
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(261, 22);
+            this.Header.Text = "Header Only";
+            // 
+            // Permission
+            // 
+            this.Permission.CheckOnClick = true;
+            this.Permission.Name = "Permission";
+            this.Permission.Size = new System.Drawing.Size(261, 22);
+            this.Permission.Text = "Permission Field Only";
+            // 
+            // MOE
+            // 
+            this.MOE.CheckOnClick = true;
+            this.MOE.Name = "MOE";
+            this.MOE.Size = new System.Drawing.Size(261, 22);
+            this.MOE.Text = "Method Of Execution Field Only";
+            // 
+            // Section
+            // 
+            this.Section.CheckOnClick = true;
+            this.Section.Name = "Section";
+            this.Section.Size = new System.Drawing.Size(261, 22);
+            this.Section.Text = "Section Only";
+            // 
+            // TableRightClickMenu
+            // 
+            this.TableRightClickMenu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TableRightClickMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.TableRightClickMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.TableRightClickMenu.Name = "TableRightClickMenu";
+            this.TableRightClickMenu.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
+            this.TableRightClickMenu.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.TableRightClickMenu.RenderStyle.ColorTable = null;
+            this.TableRightClickMenu.RenderStyle.RoundedEdges = true;
+            this.TableRightClickMenu.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.TableRightClickMenu.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
+            this.TableRightClickMenu.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.TableRightClickMenu.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.TableRightClickMenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.TableRightClickMenu.Size = new System.Drawing.Size(147, 48);
+            this.TableRightClickMenu.Tag = "Main";
+            this.TableRightClickMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ItemClick);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem1.Text = "Delete Row";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDown = this.TranselateMenu;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem2.Text = "Translate";
             // 
             // Filter
             // 
@@ -1908,6 +2016,8 @@ namespace Project_Manegement_System_KMC_Water
             this.page2.ResumeLayout(false);
             this.page2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableResults)).EndInit();
+            this.TranselateMenu.ResumeLayout(false);
+            this.TableRightClickMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2015,7 +2125,15 @@ namespace Project_Manegement_System_KMC_Water
         private Guna.UI2.WinForms.Guna2AnimateWindow LoadingAnimation;
         private Guna.UI2.WinForms.Guna2ImageButton btnFilter;
         private Guna.UI2.WinForms.Guna2ImageButton btnBack;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnTranslate;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip TranselateMenu;
+        private System.Windows.Forms.ToolStripMenuItem All;
+        private System.Windows.Forms.ToolStripMenuItem Header;
+        private System.Windows.Forms.ToolStripMenuItem Permission;
+        private System.Windows.Forms.ToolStripMenuItem MOE;
+        private System.Windows.Forms.ToolStripMenuItem Section;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip TableRightClickMenu;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

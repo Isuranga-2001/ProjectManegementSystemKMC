@@ -52,11 +52,13 @@ namespace Project_Manegement_System_KMC_Water
             this.UpDownDateMonth = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.UpDownDateYear = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.LoadingAnimation = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtProgress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownDateDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownDateMonth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownDateYear)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DragControl
@@ -111,6 +113,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtOther
             // 
+            this.txtOther.Animated = true;
             this.txtOther.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.txtOther.BorderRadius = 13;
             this.txtOther.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -153,6 +156,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnClear
             // 
+            this.btnClear.Animated = true;
             this.btnClear.BorderColor = System.Drawing.Color.Transparent;
             this.btnClear.BorderRadius = 17;
             this.btnClear.CheckedState.Parent = this.btnClear;
@@ -175,6 +179,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // BtnUpdate
             // 
+            this.BtnUpdate.Animated = true;
             this.BtnUpdate.BackColor = System.Drawing.Color.Transparent;
             this.BtnUpdate.BorderColor = System.Drawing.Color.Transparent;
             this.BtnUpdate.BorderRadius = 17;
@@ -252,8 +257,9 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // txtProjectID
             // 
+            this.txtProjectID.Animated = true;
             this.txtProjectID.BackColor = System.Drawing.Color.Transparent;
-            this.txtProjectID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtProjectID.BorderColor = System.Drawing.Color.Gainsboro;
             this.txtProjectID.BorderRadius = 15;
             this.txtProjectID.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtProjectID.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -265,14 +271,14 @@ namespace Project_Manegement_System_KMC_Water
             this.txtProjectID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProjectID.DisabledState.Parent = this.txtProjectID;
             this.txtProjectID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProjectID.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtProjectID.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtProjectID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectID.FocusedState.Parent = this.txtProjectID;
             this.txtProjectID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProjectID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
             this.txtProjectID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectID.HoverState.Parent = this.txtProjectID;
-            this.txtProjectID.Location = new System.Drawing.Point(20, 67);
+            this.txtProjectID.Location = new System.Drawing.Point(0, 0);
             this.txtProjectID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtProjectID.Name = "txtProjectID";
             this.txtProjectID.PasswordChar = '\0';
@@ -286,6 +292,7 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnHistory
             // 
+            this.btnHistory.Animated = true;
             this.btnHistory.BorderColor = System.Drawing.Color.Transparent;
             this.btnHistory.BorderRadius = 17;
             this.btnHistory.CheckedState.Parent = this.btnHistory;
@@ -341,8 +348,9 @@ namespace Project_Manegement_System_KMC_Water
             // 
             // btnSearch
             // 
+            this.btnSearch.Animated = true;
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btnSearch.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnSearch.BorderRadius = 15;
             this.btnSearch.BorderThickness = 1;
             this.btnSearch.CheckedState.Parent = this.btnSearch;
@@ -350,7 +358,8 @@ namespace Project_Manegement_System_KMC_Water
             this.btnSearch.CustomizableEdges.BottomLeft = false;
             this.btnSearch.CustomizableEdges.TopLeft = false;
             this.btnSearch.DisabledState.Parent = this.btnSearch;
-            this.btnSearch.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSearch.FillColor = System.Drawing.Color.White;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSearch.ForeColor = System.Drawing.Color.Transparent;
             this.btnSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -359,7 +368,7 @@ namespace Project_Manegement_System_KMC_Water
             this.btnSearch.HoverState.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Search_01_Lavender;
             this.btnSearch.HoverState.Parent = this.btnSearch;
             this.btnSearch.Image = global::Project_Manegement_System_KMC_Water.Properties.Resources.Search_01_Blue_01;
-            this.btnSearch.Location = new System.Drawing.Point(310, 67);
+            this.btnSearch.Location = new System.Drawing.Point(288, 0);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
             this.btnSearch.Size = new System.Drawing.Size(44, 36);
@@ -478,6 +487,23 @@ namespace Project_Manegement_System_KMC_Water
             this.LoadingAnimation.Interval = 300;
             this.LoadingAnimation.TargetForm = this;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.Controls.Add(this.txtProjectID);
+            this.guna2Panel1.Controls.Add(this.btnSearch);
+            this.guna2Panel1.Location = new System.Drawing.Point(20, 67);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.BorderRadius = 15;
+            this.guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2Panel1.ShadowDecoration.Depth = 40;
+            this.guna2Panel1.ShadowDecoration.Enabled = true;
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 4, 4);
+            this.guna2Panel1.Size = new System.Drawing.Size(332, 36);
+            this.guna2Panel1.TabIndex = 171;
+            // 
             // UpdateProgress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,16 +511,15 @@ namespace Project_Manegement_System_KMC_Water
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(858, 372);
             this.ControlBox = false;
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.UpDownDateDay);
             this.Controls.Add(this.UpDownDateMonth);
             this.Controls.Add(this.UpDownDateYear);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtProgress);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtProjectID);
             this.Controls.Add(this.guna2HtmlLabel9);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.BtnUpdate);
@@ -513,6 +538,7 @@ namespace Project_Manegement_System_KMC_Water
             ((System.ComponentModel.ISupportInitialize)(this.UpDownDateDay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownDateMonth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownDateYear)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,5 +566,6 @@ namespace Project_Manegement_System_KMC_Water
         public Guna.UI2.WinForms.Guna2NumericUpDown UpDownDateMonth;
         public Guna.UI2.WinForms.Guna2NumericUpDown UpDownDateYear;
         private Guna.UI2.WinForms.Guna2AnimateWindow LoadingAnimation;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

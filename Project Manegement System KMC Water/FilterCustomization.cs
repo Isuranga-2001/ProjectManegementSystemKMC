@@ -27,8 +27,8 @@ namespace Project_Manegement_System_KMC_Water
         public List<string> SelectedMOE = new List<string> { };
         public List<string> SelectedProgressRange = new List<string> { };
         public List<string> SelectedSection = new List<string> { };
-        public DateTime SelectedMinimumStartDate = DateTime.Now,
-            SelectedMaximumStartDate = DateTime.Now;
+        public DateTime SelectedMinimumDate = DateTime.Now,
+            SelectedMaximumDate = DateTime.Now;
 
         public List<string> SelectedPlant = new List<string> { };
 
@@ -161,6 +161,43 @@ namespace Project_Manegement_System_KMC_Water
             }
         }
 
+        private void ProductionDate_ValueChanged(object sender, EventArgs e)
+        {
+            Guna2DateTimePicker StartDateRange = (Guna2DateTimePicker)sender;
+
+            if (StartDateRange.Tag.ToString() == "MinimumProductionDate")
+            {
+                MinimumDateOFMaximumStartDate = StartDateRange.Value;
+                SelectedMinimumDate = MaximumProductionDate.Value = StartDateRange.Value;
+            }
+            else
+            {
+                if (StartDateRange.Value < MinimumDateOFMaximumStartDate)
+                {
+                    MessageBox.Show("Something Went Wrong!", "Input Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    StartDateRange.Value = MinimumProductionDate.Value;
+                }
+                SelectedMaximumDate = StartDateRange.Value;
+            }
+
+            if (MaximumProductionDate.Value.Date != DateTime.Now.Date || MinimumProductionDate.Value.Date != DateTime.Now.Date)
+            {
+                ToggleSwitchProductionDateAll.Checked = false;
+            }
+        }
+
+        private void ToggleSwitchProductionDateAll_CheckedChanged(object sender, EventArgs e)
+        {
+            Guna2ToggleSwitch ToggleSwitchStartDateAll = (Guna2ToggleSwitch)sender;
+
+            if (ToggleSwitchStartDateAll.Checked)
+            {
+                MinimumProductionDate.Value = DateTime.Now;
+                MaximumProductionDate.Value = DateTime.Now;
+            }
+        }
+
         private void StartDateRange_ValueChanged(object sender, EventArgs e)
         {
             Guna2DateTimePicker StartDateRange = (Guna2DateTimePicker)sender;
@@ -168,7 +205,7 @@ namespace Project_Manegement_System_KMC_Water
             if (StartDateRange.Tag.ToString() == "MinimumStartDate") 
             {
                 MinimumDateOFMaximumStartDate = StartDateRange.Value;
-                SelectedMinimumStartDate = MaxmumStartDate.Value = StartDateRange.Value;
+                SelectedMinimumDate = MaxmumStartDate.Value = StartDateRange.Value;
             }
             else
             {
@@ -178,7 +215,7 @@ namespace Project_Manegement_System_KMC_Water
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     StartDateRange.Value = MinimumStartDate.Value;
                 }
-                SelectedMaximumStartDate = StartDateRange.Value;
+                SelectedMaximumDate = StartDateRange.Value;
             }
 
             if (MaxmumStartDate.Value.Date != DateTime.Now.Date || MinimumStartDate.Value.Date != DateTime.Now.Date) 
