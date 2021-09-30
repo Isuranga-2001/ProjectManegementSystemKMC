@@ -408,8 +408,7 @@ namespace Project_Manegement_System_KMC_Water
                             ChartBudget.Series[1].Points.AddXY(
                                 DateTime.Today.AddMonths(j).Year.ToString() + "-" +
                                 DateTime.Today.AddMonths(j).Month.ToString(),
-                                Convert.ToDouble(VariationProductionCapacity[0].Trim()) /
-                                multiFunctions.NoOfDays(DateTime.Today.AddMonths(j).Month));
+                                Convert.ToDouble(VariationProductionCapacity[0].Trim()));
                         }
                     }
                     else

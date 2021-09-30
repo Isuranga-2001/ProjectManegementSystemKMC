@@ -53,11 +53,11 @@ namespace Project_Manegement_System_KMC_Water
                                 bool IsDeleteErrorColumns = true;
                                 string[] FirstLineOfFile = File.ReadAllLines(ofd.FileName)[0].Split(',');
 
-                                if (FirstLineOfFile[1] == "" || FirstLineOfFile[2] == "" || FirstLineOfFile[3] == "") 
+                                if (FirstLineOfFile[1] == "Road" || FirstLineOfFile[2] == "Initital" || FirstLineOfFile[3] == "Name") 
                                 {
                                     IsDeleteErrorColumns = false;
-                                    MessageBox.Show("Did not remove Name,Adress Coluumn in Selected file." +
-                                        " You should delete Name,Address Columns in selected file to continue",
+                                    MessageBox.Show("Did not remove Road,Initital and Name Coluumn in Selected file." +
+                                        " You should delete Road,Initital and Name Columns in selected file to continue",
                                         "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
 
