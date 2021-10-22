@@ -30,9 +30,9 @@ namespace Project_Manegement_System___KMC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Progress));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -140,6 +140,7 @@ namespace Project_Manegement_System___KMC
             this.btnSearch.BorderThickness = 2;
             this.btnSearch.CheckedState.Parent = this.btnSearch;
             this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnSearch.DisabledState.Parent = this.btnSearch;
             this.btnSearch.FillColor = System.Drawing.Color.Teal;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
@@ -195,6 +196,7 @@ namespace Project_Manegement_System___KMC
             this.BtnUpdateProgress.BorderThickness = 2;
             this.BtnUpdateProgress.CheckedState.Parent = this.BtnUpdateProgress;
             this.BtnUpdateProgress.CustomImages.Parent = this.BtnUpdateProgress;
+            this.BtnUpdateProgress.DisabledState.Parent = this.BtnUpdateProgress;
             this.BtnUpdateProgress.FillColor = System.Drawing.Color.Teal;
             this.BtnUpdateProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.BtnUpdateProgress.ForeColor = System.Drawing.Color.White;
@@ -336,12 +338,14 @@ namespace Project_Manegement_System___KMC
             this.btnSignOut.HoverState.ImageSize = new System.Drawing.Size(35, 35);
             this.btnSignOut.HoverState.Parent = this.btnSignOut;
             this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
+            this.btnSignOut.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnSignOut.ImageRotate = 0F;
             this.btnSignOut.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSignOut.Location = new System.Drawing.Point(1143, 0);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnSignOut.PressedState.Parent = this.btnSignOut;
+            this.btnSignOut.ShadowDecoration.Parent = this.btnSignOut;
             this.btnSignOut.Size = new System.Drawing.Size(45, 30);
             this.btnSignOut.TabIndex = 53;
             this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
@@ -728,6 +732,7 @@ namespace Project_Manegement_System___KMC
             this.btnHistory.BorderThickness = 2;
             this.btnHistory.CheckedState.Parent = this.btnHistory;
             this.btnHistory.CustomImages.Parent = this.btnHistory;
+            this.btnHistory.DisabledState.Parent = this.btnHistory;
             this.btnHistory.FillColor = System.Drawing.Color.White;
             this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnHistory.ForeColor = System.Drawing.Color.Teal;
@@ -749,7 +754,9 @@ namespace Project_Manegement_System___KMC
             this.ProgressBarProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F);
             this.ProgressBarProgress.ForeColor = System.Drawing.Color.Teal;
             this.ProgressBarProgress.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.ProgressBarProgress.InnerColor = System.Drawing.Color.Transparent;
             this.ProgressBarProgress.Location = new System.Drawing.Point(629, 460);
+            this.ProgressBarProgress.Minimum = 0;
             this.ProgressBarProgress.Name = "ProgressBarProgress";
             this.ProgressBarProgress.ProgressColor = System.Drawing.Color.Teal;
             this.ProgressBarProgress.ProgressColor2 = System.Drawing.Color.DarkTurquoise;
@@ -767,7 +774,10 @@ namespace Project_Manegement_System___KMC
             // 
             // guna2CircleProgressBar1
             // 
+            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
             this.guna2CircleProgressBar1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CircleProgressBar1.Minimum = 0;
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.ShadowDecoration.Parent = this.guna2CircleProgressBar1;
             this.guna2CircleProgressBar1.Size = new System.Drawing.Size(130, 130);
@@ -780,6 +790,7 @@ namespace Project_Manegement_System___KMC
             this.btnClear.BorderThickness = 2;
             this.btnClear.CheckedState.Parent = this.btnClear;
             this.btnClear.CustomImages.Parent = this.btnClear;
+            this.btnClear.DisabledState.Parent = this.btnClear;
             this.btnClear.FillColor = System.Drawing.Color.White;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnClear.ForeColor = System.Drawing.Color.Teal;
@@ -808,6 +819,7 @@ namespace Project_Manegement_System___KMC
             this.btnSelect.BorderThickness = 2;
             this.btnSelect.CheckedState.Parent = this.btnSelect;
             this.btnSelect.CustomImages.Parent = this.btnSelect;
+            this.btnSelect.DisabledState.Parent = this.btnSelect;
             this.btnSelect.FillColor = System.Drawing.Color.White;
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSelect.ForeColor = System.Drawing.Color.Teal;
@@ -859,12 +871,14 @@ namespace Project_Manegement_System___KMC
             this.btnProgressHistory.HoverState.ImageSize = new System.Drawing.Size(70, 70);
             this.btnProgressHistory.HoverState.Parent = this.btnProgressHistory;
             this.btnProgressHistory.Image = global::Project_Manegement_System___KMC.Properties.Resources.Progress_History;
+            this.btnProgressHistory.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnProgressHistory.ImageRotate = 0F;
             this.btnProgressHistory.ImageSize = new System.Drawing.Size(60, 60);
             this.btnProgressHistory.Location = new System.Drawing.Point(8, 8);
             this.btnProgressHistory.Name = "btnProgressHistory";
             this.btnProgressHistory.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnProgressHistory.PressedState.Parent = this.btnProgressHistory;
+            this.btnProgressHistory.ShadowDecoration.Parent = this.btnProgressHistory;
             this.btnProgressHistory.Size = new System.Drawing.Size(75, 75);
             this.btnProgressHistory.TabIndex = 15;
             this.btnProgressHistory.Click += new System.EventHandler(this.btnProgressHistory_Click);
@@ -888,12 +902,14 @@ namespace Project_Manegement_System___KMC
             this.btnEditData.HoverState.ImageSize = new System.Drawing.Size(60, 60);
             this.btnEditData.HoverState.Parent = this.btnEditData;
             this.btnEditData.Image = global::Project_Manegement_System___KMC.Properties.Resources.Edit_Data_in_Database;
+            this.btnEditData.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnEditData.ImageRotate = 0F;
             this.btnEditData.ImageSize = new System.Drawing.Size(50, 50);
             this.btnEditData.Location = new System.Drawing.Point(8, 8);
             this.btnEditData.Name = "btnEditData";
             this.btnEditData.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnEditData.PressedState.Parent = this.btnEditData;
+            this.btnEditData.ShadowDecoration.Parent = this.btnEditData;
             this.btnEditData.Size = new System.Drawing.Size(75, 75);
             this.btnEditData.TabIndex = 14;
             this.btnEditData.Click += new System.EventHandler(this.btnEditData_Click);
@@ -917,12 +933,14 @@ namespace Project_Manegement_System___KMC
             this.btnSettings.HoverState.ImageSize = new System.Drawing.Size(60, 60);
             this.btnSettings.HoverState.Parent = this.btnSettings;
             this.btnSettings.Image = global::Project_Manegement_System___KMC.Properties.Resources.Settings;
+            this.btnSettings.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnSettings.ImageRotate = 0F;
             this.btnSettings.ImageSize = new System.Drawing.Size(50, 50);
             this.btnSettings.Location = new System.Drawing.Point(8, 8);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnSettings.PressedState.Parent = this.btnSettings;
+            this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
             this.btnSettings.Size = new System.Drawing.Size(75, 75);
             this.btnSettings.TabIndex = 14;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
@@ -946,12 +964,14 @@ namespace Project_Manegement_System___KMC
             this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(60, 60);
             this.guna2ImageButton4.HoverState.Parent = this.guna2ImageButton4;
             this.guna2ImageButton4.Image = global::Project_Manegement_System___KMC.Properties.Resources.Filter;
+            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton4.ImageRotate = 0F;
             this.guna2ImageButton4.ImageSize = new System.Drawing.Size(50, 50);
             this.guna2ImageButton4.Location = new System.Drawing.Point(8, 8);
             this.guna2ImageButton4.Name = "guna2ImageButton4";
             this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton4.PressedState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.ShadowDecoration.Parent = this.guna2ImageButton4;
             this.guna2ImageButton4.Size = new System.Drawing.Size(75, 75);
             this.guna2ImageButton4.TabIndex = 14;
             this.guna2ImageButton4.Click += new System.EventHandler(this.btnFilter_Click);
@@ -975,12 +995,14 @@ namespace Project_Manegement_System___KMC
             this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(60, 60);
             this.guna2ImageButton3.HoverState.Parent = this.guna2ImageButton3;
             this.guna2ImageButton3.Image = global::Project_Manegement_System___KMC.Properties.Resources.Progress;
+            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton3.ImageRotate = 0F;
             this.guna2ImageButton3.ImageSize = new System.Drawing.Size(50, 50);
             this.guna2ImageButton3.Location = new System.Drawing.Point(8, 8);
             this.guna2ImageButton3.Name = "guna2ImageButton3";
             this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton3.PressedState.Parent = this.guna2ImageButton3;
+            this.guna2ImageButton3.ShadowDecoration.Parent = this.guna2ImageButton3;
             this.guna2ImageButton3.Size = new System.Drawing.Size(75, 75);
             this.guna2ImageButton3.TabIndex = 14;
             // 
@@ -1003,12 +1025,14 @@ namespace Project_Manegement_System___KMC
             this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(60, 60);
             this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
             this.guna2ImageButton2.Image = global::Project_Manegement_System___KMC.Properties.Resources.Add_Data;
+            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton2.ImageRotate = 0F;
             this.guna2ImageButton2.ImageSize = new System.Drawing.Size(50, 50);
             this.guna2ImageButton2.Location = new System.Drawing.Point(8, 8);
             this.guna2ImageButton2.Name = "guna2ImageButton2";
             this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
+            this.guna2ImageButton2.ShadowDecoration.Parent = this.guna2ImageButton2;
             this.guna2ImageButton2.Size = new System.Drawing.Size(75, 75);
             this.guna2ImageButton2.TabIndex = 14;
             this.guna2ImageButton2.Click += new System.EventHandler(this.btnAddData_Click);
@@ -1032,12 +1056,14 @@ namespace Project_Manegement_System___KMC
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(60, 60);
             this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Image = global::Project_Manegement_System___KMC.Properties.Resources.Dashboard;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(50, 50);
             this.guna2ImageButton1.Location = new System.Drawing.Point(8, 8);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Size = new System.Drawing.Size(75, 75);
             this.guna2ImageButton1.TabIndex = 14;
             this.guna2ImageButton1.Click += new System.EventHandler(this.btnDashboard_Click);
@@ -1049,6 +1075,7 @@ namespace Project_Manegement_System___KMC
             this.btnEdit.BorderThickness = 2;
             this.btnEdit.CheckedState.Parent = this.btnEdit;
             this.btnEdit.CustomImages.Parent = this.btnEdit;
+            this.btnEdit.DisabledState.Parent = this.btnEdit;
             this.btnEdit.FillColor = System.Drawing.Color.White;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnEdit.ForeColor = System.Drawing.Color.Teal;
@@ -1071,6 +1098,7 @@ namespace Project_Manegement_System___KMC
             this.btnRemoveProject.BorderThickness = 2;
             this.btnRemoveProject.CheckedState.Parent = this.btnRemoveProject;
             this.btnRemoveProject.CustomImages.Parent = this.btnRemoveProject;
+            this.btnRemoveProject.DisabledState.Parent = this.btnRemoveProject;
             this.btnRemoveProject.FillColor = System.Drawing.Color.White;
             this.btnRemoveProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnRemoveProject.ForeColor = System.Drawing.Color.Teal;
@@ -1088,18 +1116,18 @@ namespace Project_Manegement_System___KMC
             // 
             // ChartProgressHistory
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ChartProgressHistory.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.ChartProgressHistory.ChartAreas.Add(chartArea1);
             this.ChartProgressHistory.Location = new System.Drawing.Point(170, 412);
             this.ChartProgressHistory.Name = "ChartProgressHistory";
             this.ChartProgressHistory.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.ChartProgressHistory.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.DarkCyan};
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series2.Name = "Series1";
-            series2.YValuesPerPoint = 2;
-            this.ChartProgressHistory.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.ChartProgressHistory.Series.Add(series1);
             this.ChartProgressHistory.Size = new System.Drawing.Size(426, 273);
             this.ChartProgressHistory.TabIndex = 154;
             this.ChartProgressHistory.Text = "chart1";

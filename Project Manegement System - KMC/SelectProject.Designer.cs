@@ -33,6 +33,7 @@ namespace Project_Manegement_System___KMC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectProject));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddNew = new Guna.UI2.WinForms.Guna2Button();
@@ -41,12 +42,12 @@ namespace Project_Manegement_System___KMC
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DataGridViewProject = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.ProjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
+            this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewProject)).BeginInit();
@@ -70,6 +71,7 @@ namespace Project_Manegement_System___KMC
             this.btnAddNew.BorderThickness = 2;
             this.btnAddNew.CheckedState.Parent = this.btnAddNew;
             this.btnAddNew.CustomImages.Parent = this.btnAddNew;
+            this.btnAddNew.DisabledState.Parent = this.btnAddNew;
             this.btnAddNew.FillColor = System.Drawing.Color.White;
             this.btnAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnAddNew.ForeColor = System.Drawing.Color.Teal;
@@ -92,6 +94,7 @@ namespace Project_Manegement_System___KMC
             this.btnOK.BorderThickness = 2;
             this.btnOK.CheckedState.Parent = this.btnOK;
             this.btnOK.CustomImages.Parent = this.btnOK;
+            this.btnOK.DisabledState.Parent = this.btnOK;
             this.btnOK.FillColor = System.Drawing.Color.Teal;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOK.ForeColor = System.Drawing.Color.White;
@@ -144,22 +147,27 @@ namespace Project_Manegement_System___KMC
             // 
             // DataGridViewProject
             // 
+            this.DataGridViewProject.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.DataGridViewProject.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridViewProject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridViewProject.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.DataGridViewProject.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewProject.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DataGridViewProject.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DataGridViewProject.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridViewProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridViewProject.ColumnHeadersHeight = 30;
-            this.DataGridViewProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DataGridViewProject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProjectID,
             this.Description,
@@ -177,6 +185,15 @@ namespace Project_Manegement_System___KMC
             this.DataGridViewProject.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.DataGridViewProject.Location = new System.Drawing.Point(12, 165);
             this.DataGridViewProject.Name = "DataGridViewProject";
+            this.DataGridViewProject.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewProject.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridViewProject.RowHeadersVisible = false;
             this.DataGridViewProject.RowTemplate.Height = 25;
             this.DataGridViewProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -184,17 +201,17 @@ namespace Project_Manegement_System___KMC
             this.DataGridViewProject.TabIndex = 5;
             this.DataGridViewProject.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Teal;
             this.DataGridViewProject.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
-            this.DataGridViewProject.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DataGridViewProject.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DataGridViewProject.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DataGridViewProject.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DataGridViewProject.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataGridViewProject.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DataGridViewProject.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            this.DataGridViewProject.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DataGridViewProject.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DataGridViewProject.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.DataGridViewProject.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.DataGridViewProject.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DataGridViewProject.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGridViewProject.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DataGridViewProject.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridViewProject.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DataGridViewProject.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DataGridViewProject.ThemeStyle.HeaderStyle.Height = 30;
             this.DataGridViewProject.ThemeStyle.ReadOnly = false;
             this.DataGridViewProject.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
@@ -205,6 +222,23 @@ namespace Project_Manegement_System___KMC
             this.DataGridViewProject.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
             this.DataGridViewProject.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DataGridViewProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewProject_CellClick);
+            // 
+            // ProjectID
+            // 
+            this.ProjectID.FillWeight = 25F;
+            this.ProjectID.HeaderText = "IndexNo";
+            this.ProjectID.Name = "ProjectID";
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            // 
+            // ZoneNo
+            // 
+            this.ZoneNo.FillWeight = 15F;
+            this.ZoneNo.HeaderText = "Section";
+            this.ZoneNo.Name = "ZoneNo";
             // 
             // guna2Separator3
             // 
@@ -253,23 +287,6 @@ namespace Project_Manegement_System___KMC
             // 
             this.DragControl.ContainerControl = this;
             this.DragControl.TargetControl = this.panel1;
-            // 
-            // ProjectID
-            // 
-            this.ProjectID.FillWeight = 25F;
-            this.ProjectID.HeaderText = "IndexNo";
-            this.ProjectID.Name = "ProjectID";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // ZoneNo
-            // 
-            this.ZoneNo.FillWeight = 15F;
-            this.ZoneNo.HeaderText = "Section";
-            this.ZoneNo.Name = "ZoneNo";
             // 
             // SelectProject
             // 

@@ -25,7 +25,8 @@ namespace Project_Manegement_System___KMC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("|DataDirectory|\\PROJECTMANEGEMENTSYSTEMDB.MDF")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\user\\source\\repos\\Projects\\C# Programming Projects\\My Projects\\ProjectMa" +
+            "negementSystemKMC\\Project Manegement System - KMC\\ProjectManegementSystemDB.mdf")]
         public string DatabaseLocation {
             get {
                 return ((string)(this["DatabaseLocation"]));

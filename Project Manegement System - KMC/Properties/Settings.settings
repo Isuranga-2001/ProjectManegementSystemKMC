@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="DatabaseLocation" Type="System.String" Scope="User">
-      <Value Profile="(Default)">|DataDirectory|\PROJECTMANEGEMENTSYSTEMDB.MDF</Value>
+      <Value Profile="(Default)">C:\Users\user\source\repos\Projects\C# Programming Projects\My Projects\ProjectManegementSystemKMC\Project Manegement System - KMC\ProjectManegementSystemDB.mdf</Value>
     </Setting>
     <Setting Name="ProjectManegementSystemDBConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;

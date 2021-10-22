@@ -24,7 +24,7 @@ namespace Project_Manegement_System___KMC
 
         private void AddNew_Load(object sender, EventArgs e)
         {
-            //Start();
+            Start();
         }
 
         private void btnMethordofExecution_Click(object sender, EventArgs e)
@@ -334,9 +334,16 @@ namespace Project_Manegement_System___KMC
 
         private void btnEditData_Click(object sender, EventArgs e)
         {
-            EditData form = new EditData();
-            form.Show();
-            this.Close();
+            AddNewTableMode form = new AddNewTableMode();
+            form.ShowDialog();
+
+            if (form.NavigateToProgress)
+            {
+                Progress SubForm = new Progress();
+                SubForm.txtProjectID.Text = form.SelectedProjectID;
+                SubForm.Show();
+                this.Close();
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -356,6 +363,20 @@ namespace Project_Manegement_System___KMC
             Login form = new Login();
             form.Show();
             this.Close();
+        }
+
+        private void btnTableMode_Click(object sender, EventArgs e)
+        {
+            AddNewTableMode form = new AddNewTableMode();
+            form.ShowDialog();
+
+            if (form.NavigateToProgress)
+            {
+                Progress SubForm = new Progress();
+                SubForm.txtProjectID.Text = form.SelectedProjectID;
+                SubForm.Show();
+                this.Close();
+            }
         }
 
         private void btnProgressHistory_Click(object sender, EventArgs e)

@@ -985,11 +985,11 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(37, 18);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(19, 18);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(142, 20);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(177, 20);
             this.guna2HtmlLabel1.TabIndex = 153;
-            this.guna2HtmlLabel1.Text = "Total Income 2021";
+            this.guna2HtmlLabel1.Text = "Total Est. Income 2021";
             // 
             // guna2Panel9
             // 
@@ -1088,16 +1088,16 @@ namespace Project_Manegement_System_KMC_Water
             this.Cumulate});
             this.ContextMenuStrip_CostAndIncome.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.ContextMenuStrip_CostAndIncome.Name = "ContextMenuStrip_CostAndIncome";
-            this.ContextMenuStrip_CostAndIncome.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.ContextMenuStrip_CostAndIncome.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(115)))));
             this.ContextMenuStrip_CostAndIncome.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
             this.ContextMenuStrip_CostAndIncome.RenderStyle.ColorTable = null;
             this.ContextMenuStrip_CostAndIncome.RenderStyle.RoundedEdges = true;
             this.ContextMenuStrip_CostAndIncome.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.ContextMenuStrip_CostAndIncome.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.ContextMenuStrip_CostAndIncome.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(179)))));
             this.ContextMenuStrip_CostAndIncome.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.ContextMenuStrip_CostAndIncome.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.ContextMenuStrip_CostAndIncome.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.ContextMenuStrip_CostAndIncome.Size = new System.Drawing.Size(182, 48);
+            this.ContextMenuStrip_CostAndIncome.Size = new System.Drawing.Size(182, 70);
             this.ContextMenuStrip_CostAndIncome.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ContextMenuStrip_CostAndIncome_ItemClicked);
             // 
             // NonCumulate

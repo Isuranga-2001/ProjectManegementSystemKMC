@@ -91,6 +91,7 @@ namespace Project_Manegement_System___KMC
             // 
             this.guna2PictureBox1.Image = global::Project_Manegement_System___KMC.Properties.Resources.Manager;
             this.guna2PictureBox1.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
+            this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(12, 36);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
@@ -224,6 +225,7 @@ namespace Project_Manegement_System___KMC
             this.guna2Button1.BorderRadius = 15;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.PaleTurquoise;
             this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Teal;
@@ -233,7 +235,7 @@ namespace Project_Manegement_System___KMC
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(141, 45);
             this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "v1.1.6.3";
+            this.guna2Button1.Text = "v1.2.0.7";
             // 
             // DragControl
             // 

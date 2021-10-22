@@ -549,8 +549,8 @@ namespace Project_Manegement_System_KMC_Water
 
         private void btnShowResults_Click(object sender, EventArgs e)
         {
-            CreateResultSheet(null);
             CustomFilters = new FilterCustomization();
+            CreateResultSheet(null);            
             pagedControl1.SelectedPage = page2;
             ResetTranslateMenuItems();
         }
@@ -1002,6 +1002,11 @@ namespace Project_Manegement_System_KMC_Water
         private void btnClose_Click(object sender, EventArgs e)
         {
             multiFunctions.NavigateTo(BtnClose.Tag.ToString(), this);
+        }
+
+        private void TableRightClickMenu_Opening(object sender, CancelEventArgs e)
+        {
+            TranselateItem.DropDown = TranselateMenu;
         }
 
         Dictionary<string, string> FindMeaningsOFTranslate(string Field)

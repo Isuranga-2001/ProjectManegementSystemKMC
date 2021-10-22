@@ -244,7 +244,7 @@ namespace Project_Manegement_System_KMC_Water
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(141, 45);
             this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "v1.0.0.0";
+            this.guna2Button1.Text = "v1.0.1.2";
             // 
             // DragControl
             // 

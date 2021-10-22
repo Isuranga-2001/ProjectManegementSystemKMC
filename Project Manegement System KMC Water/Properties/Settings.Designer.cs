@@ -49,9 +49,7 @@ namespace Project_Manegement_System_KMC_Water.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\user\\source\\repos\\Projects\\C# Programming Projects\\My Projects\\ProjectMa" +
-            "negementSystemKMC\\Project Manegement System KMC Water\\ProjectMnagementSystemWate" +
-            "rDB.mdf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("|DataDirectory|\\ProjectMnagementSystemWaterDB.mdf")]
         public string DatabaseLocation {
             get {
                 return ((string)(this["DatabaseLocation"]));

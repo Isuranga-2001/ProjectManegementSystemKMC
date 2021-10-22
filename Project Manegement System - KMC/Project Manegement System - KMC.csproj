@@ -94,6 +94,12 @@
     <Compile Include="AddNew.Designer.cs">
       <DependentUpon>AddNew.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewTableMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewTableMode.Designer.cs">
+      <DependentUpon>AddNewTableMode.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,12 @@
       <DependentUpon>ProgressHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDate.Designer.cs">
+      <DependentUpon>SelectDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectExpenditureHead.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddNew.resx">
       <DependentUpon>AddNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewTableMode.resx">
+      <DependentUpon>AddNewTableMode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
@@ -230,6 +245,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SelectDate.resx">
+      <DependentUpon>SelectDate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectExpenditureHead.resx">
       <DependentUpon>SelectExpenditureHead.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +282,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ProjectManegementSystemDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Progress1.png" />
+    <None Include="Resources\Save1.png" />
+    <None Include="Resources\Remove2.png" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\Edit2.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Remove1.png" />
+    <None Include="Resources\Edit1.png" />
+    <None Include="Resources\EditBlack.bmp" />
+    <None Include="Resources\Remove.png" />
+    <None Include="Resources\Save 01 Blue 011.png" />
+    <None Include="Resources\Save 01 Blue 01.png" />
     <None Include="Resources\Data.png" />
     <None Include="Resources\Warning.png" />
     <None Include="Resources\Search.png" />
@@ -299,7 +329,7 @@
       <Version>2.9.3</Version>
     </PackageReference>
     <PackageReference Include="Guna.UI2.WinForms">
-      <Version>2.0.1.4</Version>
+      <Version>2.0.2.3</Version>
     </PackageReference>
     <PackageReference Include="RibbonWinForms">
       <Version>5.0.1.1</Version>

@@ -33,6 +33,7 @@ namespace Project_Manegement_System___KMC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgressHistory));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -164,6 +165,7 @@ namespace Project_Manegement_System___KMC
             this.btnFilter.BorderThickness = 2;
             this.btnFilter.CheckedState.Parent = this.btnFilter;
             this.btnFilter.CustomImages.Parent = this.btnFilter;
+            this.btnFilter.DisabledState.Parent = this.btnFilter;
             this.btnFilter.FillColor = System.Drawing.Color.Teal;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnFilter.ForeColor = System.Drawing.Color.White;
@@ -227,18 +229,23 @@ namespace Project_Manegement_System___KMC
             // 
             // DataGridViewProgressHistory
             // 
+            this.DataGridViewProgressHistory.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.DataGridViewProgressHistory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridViewProgressHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridViewProgressHistory.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.DataGridViewProgressHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewProgressHistory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DataGridViewProgressHistory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridViewProgressHistory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridViewProgressHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -261,7 +268,15 @@ namespace Project_Manegement_System___KMC
             this.DataGridViewProgressHistory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.DataGridViewProgressHistory.Location = new System.Drawing.Point(11, 189);
             this.DataGridViewProgressHistory.Name = "DataGridViewProgressHistory";
-            this.DataGridViewProgressHistory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DataGridViewProgressHistory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewProgressHistory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridViewProgressHistory.RowHeadersVisible = false;
             this.DataGridViewProgressHistory.RowTemplate.Height = 25;
             this.DataGridViewProgressHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -269,10 +284,10 @@ namespace Project_Manegement_System___KMC
             this.DataGridViewProgressHistory.TabIndex = 151;
             this.DataGridViewProgressHistory.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Teal;
             this.DataGridViewProgressHistory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
-            this.DataGridViewProgressHistory.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DataGridViewProgressHistory.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DataGridViewProgressHistory.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DataGridViewProgressHistory.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DataGridViewProgressHistory.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataGridViewProgressHistory.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DataGridViewProgressHistory.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            this.DataGridViewProgressHistory.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DataGridViewProgressHistory.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DataGridViewProgressHistory.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.DataGridViewProgressHistory.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -321,6 +336,7 @@ namespace Project_Manegement_System___KMC
             this.btnShowAll.BorderThickness = 2;
             this.btnShowAll.CheckedState.Parent = this.btnShowAll;
             this.btnShowAll.CustomImages.Parent = this.btnShowAll;
+            this.btnShowAll.DisabledState.Parent = this.btnShowAll;
             this.btnShowAll.FillColor = System.Drawing.Color.White;
             this.btnShowAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnShowAll.ForeColor = System.Drawing.Color.Teal;
@@ -389,6 +405,7 @@ namespace Project_Manegement_System___KMC
             this.btnSelect.BorderThickness = 2;
             this.btnSelect.CheckedState.Parent = this.btnSelect;
             this.btnSelect.CustomImages.Parent = this.btnSelect;
+            this.btnSelect.DisabledState.Parent = this.btnSelect;
             this.btnSelect.FillColor = System.Drawing.Color.White;
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSelect.ForeColor = System.Drawing.Color.Teal;
@@ -417,6 +434,7 @@ namespace Project_Manegement_System___KMC
             this.btnExport.BorderThickness = 2;
             this.btnExport.CheckedState.Parent = this.btnExport;
             this.btnExport.CustomImages.Parent = this.btnExport;
+            this.btnExport.DisabledState.Parent = this.btnExport;
             this.btnExport.FillColor = System.Drawing.Color.Teal;
             this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnExport.ForeColor = System.Drawing.Color.White;
@@ -468,6 +486,7 @@ namespace Project_Manegement_System___KMC
             this.btnShowResults.BorderRadius = 8;
             this.btnShowResults.CheckedState.Parent = this.btnShowResults;
             this.btnShowResults.CustomImages.Parent = this.btnShowResults;
+            this.btnShowResults.DisabledState.Parent = this.btnShowResults;
             this.btnShowResults.FillColor = System.Drawing.Color.White;
             this.btnShowResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnShowResults.ForeColor = System.Drawing.Color.Teal;
@@ -512,6 +531,7 @@ namespace Project_Manegement_System___KMC
             this.btnOpen.BorderThickness = 2;
             this.btnOpen.CheckedState.Parent = this.btnOpen;
             this.btnOpen.CustomImages.Parent = this.btnOpen;
+            this.btnOpen.DisabledState.Parent = this.btnOpen;
             this.btnOpen.FillColor = System.Drawing.Color.Teal;
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnOpen.ForeColor = System.Drawing.Color.White;
@@ -535,6 +555,7 @@ namespace Project_Manegement_System___KMC
             this.btnShowProjectDetails.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnShowProjectDetails.CheckedState.Parent = this.btnShowProjectDetails;
             this.btnShowProjectDetails.CustomImages.Parent = this.btnShowProjectDetails;
+            this.btnShowProjectDetails.DisabledState.Parent = this.btnShowProjectDetails;
             this.btnShowProjectDetails.FillColor = System.Drawing.Color.White;
             this.btnShowProjectDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnShowProjectDetails.ForeColor = System.Drawing.Color.Teal;
@@ -557,6 +578,7 @@ namespace Project_Manegement_System___KMC
             this.btnSubFormExport.BorderRadius = 8;
             this.btnSubFormExport.CheckedState.Parent = this.btnSubFormExport;
             this.btnSubFormExport.CustomImages.Parent = this.btnSubFormExport;
+            this.btnSubFormExport.DisabledState.Parent = this.btnSubFormExport;
             this.btnSubFormExport.FillColor = System.Drawing.Color.White;
             this.btnSubFormExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSubFormExport.ForeColor = System.Drawing.Color.Teal;
@@ -579,6 +601,7 @@ namespace Project_Manegement_System___KMC
             this.btnSubFormOpen.BorderRadius = 8;
             this.btnSubFormOpen.CheckedState.Parent = this.btnSubFormOpen;
             this.btnSubFormOpen.CustomImages.Parent = this.btnSubFormOpen;
+            this.btnSubFormOpen.DisabledState.Parent = this.btnSubFormOpen;
             this.btnSubFormOpen.FillColor = System.Drawing.Color.White;
             this.btnSubFormOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSubFormOpen.ForeColor = System.Drawing.Color.Teal;
@@ -601,6 +624,7 @@ namespace Project_Manegement_System___KMC
             this.btnSubFormShowResult.BorderRadius = 8;
             this.btnSubFormShowResult.CheckedState.Parent = this.btnSubFormShowResult;
             this.btnSubFormShowResult.CustomImages.Parent = this.btnSubFormShowResult;
+            this.btnSubFormShowResult.DisabledState.Parent = this.btnSubFormShowResult;
             this.btnSubFormShowResult.FillColor = System.Drawing.Color.White;
             this.btnSubFormShowResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSubFormShowResult.ForeColor = System.Drawing.Color.Teal;

@@ -31,9 +31,6 @@ namespace Project_Manegement_System___KMC
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditDataCustomize));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnOK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,50 +55,15 @@ namespace Project_Manegement_System___KMC
             this.txtPermission = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtMOE = new Guna.UI2.WinForms.Guna2ComboBox();
             this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 30);
-            this.panel1.TabIndex = 5;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FillColor = System.Drawing.Color.Teal;
-            this.btnClose.HoverState.Parent = this.btnClose;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(703, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Parent = this.btnClose;
-            this.btnClose.Size = new System.Drawing.Size(45, 30);
-            this.btnClose.TabIndex = 48;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Project Data Customize";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btnOK);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 450);
+            this.panel2.Location = new System.Drawing.Point(0, 432);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(748, 57);
             this.panel2.TabIndex = 6;
@@ -113,6 +75,7 @@ namespace Project_Manegement_System___KMC
             this.btnOK.BorderThickness = 2;
             this.btnOK.CheckedState.Parent = this.btnOK;
             this.btnOK.CustomImages.Parent = this.btnOK;
+            this.btnOK.DisabledState.Parent = this.btnOK;
             this.btnOK.FillColor = System.Drawing.Color.Teal;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOK.ForeColor = System.Drawing.Color.White;
@@ -133,7 +96,7 @@ namespace Project_Manegement_System___KMC
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Teal;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(27, 114);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(27, 88);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(139, 20);
             this.guna2HtmlLabel1.TabIndex = 54;
@@ -145,7 +108,7 @@ namespace Project_Manegement_System___KMC
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(24, 47);
+            this.label2.Location = new System.Drawing.Point(24, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 52;
@@ -172,7 +135,7 @@ namespace Project_Manegement_System___KMC
             this.txtProjectID.ForeColor = System.Drawing.Color.Black;
             this.txtProjectID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProjectID.HoverState.Parent = this.txtProjectID;
-            this.txtProjectID.Location = new System.Drawing.Point(14, 66);
+            this.txtProjectID.Location = new System.Drawing.Point(14, 40);
             this.txtProjectID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtProjectID.Name = "txtProjectID";
             this.txtProjectID.PasswordChar = '\0';
@@ -206,7 +169,7 @@ namespace Project_Manegement_System___KMC
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.HoverState.Parent = this.txtDescription;
-            this.txtDescription.Location = new System.Drawing.Point(14, 142);
+            this.txtDescription.Location = new System.Drawing.Point(14, 116);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -223,7 +186,7 @@ namespace Project_Manegement_System___KMC
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Teal;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(287, 45);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(287, 19);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(75, 20);
             this.guna2HtmlLabel8.TabIndex = 75;
@@ -245,7 +208,7 @@ namespace Project_Manegement_System___KMC
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.ItemHeight = 30;
             this.txtName.ItemsAppearance.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(272, 66);
+            this.txtName.Location = new System.Drawing.Point(272, 40);
             this.txtName.Name = "txtName";
             this.txtName.ShadowDecoration.Parent = this.txtName;
             this.txtName.Size = new System.Drawing.Size(464, 36);
@@ -256,7 +219,7 @@ namespace Project_Manegement_System___KMC
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(207, 264);
+            this.label3.Location = new System.Drawing.Point(207, 238);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 24);
             this.label3.TabIndex = 88;
@@ -267,7 +230,7 @@ namespace Project_Manegement_System___KMC
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Teal;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(526, 236);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(526, 210);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(77, 20);
             this.guna2HtmlLabel9.TabIndex = 85;
@@ -278,7 +241,7 @@ namespace Project_Manegement_System___KMC
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Teal;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(263, 236);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(263, 210);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(79, 20);
             this.guna2HtmlLabel7.TabIndex = 86;
@@ -289,7 +252,7 @@ namespace Project_Manegement_System___KMC
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Teal;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(27, 236);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(27, 210);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(128, 20);
             this.guna2HtmlLabel2.TabIndex = 84;
@@ -311,7 +274,7 @@ namespace Project_Manegement_System___KMC
             this.txtEstimator.HoverState.Parent = this.txtEstimator;
             this.txtEstimator.ItemHeight = 30;
             this.txtEstimator.ItemsAppearance.Parent = this.txtEstimator;
-            this.txtEstimator.Location = new System.Drawing.Point(507, 259);
+            this.txtEstimator.Location = new System.Drawing.Point(507, 233);
             this.txtEstimator.Name = "txtEstimator";
             this.txtEstimator.ShadowDecoration.Parent = this.txtEstimator;
             this.txtEstimator.Size = new System.Drawing.Size(229, 36);
@@ -338,7 +301,7 @@ namespace Project_Manegement_System___KMC
             this.txtEstimatedMoney.ForeColor = System.Drawing.Color.Black;
             this.txtEstimatedMoney.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEstimatedMoney.HoverState.Parent = this.txtEstimatedMoney;
-            this.txtEstimatedMoney.Location = new System.Drawing.Point(14, 259);
+            this.txtEstimatedMoney.Location = new System.Drawing.Point(14, 233);
             this.txtEstimatedMoney.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtEstimatedMoney.Name = "txtEstimatedMoney";
             this.txtEstimatedMoney.PasswordChar = '\0';
@@ -360,7 +323,7 @@ namespace Project_Manegement_System___KMC
             this.txtDate.ForeColor = System.Drawing.Color.Black;
             this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txtDate.HoverState.Parent = this.txtDate;
-            this.txtDate.Location = new System.Drawing.Point(249, 259);
+            this.txtDate.Location = new System.Drawing.Point(249, 233);
             this.txtDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtDate.Name = "txtDate";
@@ -375,7 +338,7 @@ namespace Project_Manegement_System___KMC
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 264);
+            this.label4.Location = new System.Drawing.Point(23, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 24);
             this.label4.TabIndex = 89;
@@ -386,7 +349,7 @@ namespace Project_Manegement_System___KMC
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Teal;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(27, 303);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(27, 277);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(129, 20);
             this.guna2HtmlLabel3.TabIndex = 91;
@@ -397,12 +360,13 @@ namespace Project_Manegement_System___KMC
             this.btnEHSelect.BorderRadius = 5;
             this.btnEHSelect.CheckedState.Parent = this.btnEHSelect;
             this.btnEHSelect.CustomImages.Parent = this.btnEHSelect;
+            this.btnEHSelect.DisabledState.Parent = this.btnEHSelect;
             this.btnEHSelect.FillColor = System.Drawing.Color.PaleTurquoise;
             this.btnEHSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btnEHSelect.ForeColor = System.Drawing.Color.Black;
             this.btnEHSelect.HoverState.FillColor = System.Drawing.Color.DarkTurquoise;
             this.btnEHSelect.HoverState.Parent = this.btnEHSelect;
-            this.btnEHSelect.Location = new System.Drawing.Point(507, 326);
+            this.btnEHSelect.Location = new System.Drawing.Point(507, 300);
             this.btnEHSelect.Name = "btnEHSelect";
             this.btnEHSelect.ShadowDecoration.Parent = this.btnEHSelect;
             this.btnEHSelect.Size = new System.Drawing.Size(229, 39);
@@ -431,7 +395,7 @@ namespace Project_Manegement_System___KMC
             this.txtEH.ForeColor = System.Drawing.Color.Black;
             this.txtEH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEH.HoverState.Parent = this.txtEH;
-            this.txtEH.Location = new System.Drawing.Point(14, 326);
+            this.txtEH.Location = new System.Drawing.Point(14, 300);
             this.txtEH.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtEH.Name = "txtEH";
             this.txtEH.PasswordChar = '\0';
@@ -449,7 +413,7 @@ namespace Project_Manegement_System___KMC
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Teal;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(27, 373);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(27, 347);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(88, 20);
             this.guna2HtmlLabel4.TabIndex = 93;
@@ -460,7 +424,7 @@ namespace Project_Manegement_System___KMC
             this.lblMethordofExecution.BackColor = System.Drawing.Color.Transparent;
             this.lblMethordofExecution.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblMethordofExecution.ForeColor = System.Drawing.Color.Teal;
-            this.lblMethordofExecution.Location = new System.Drawing.Point(391, 373);
+            this.lblMethordofExecution.Location = new System.Drawing.Point(391, 347);
             this.lblMethordofExecution.Name = "lblMethordofExecution";
             this.lblMethordofExecution.Size = new System.Drawing.Size(154, 20);
             this.lblMethordofExecution.TabIndex = 97;
@@ -486,7 +450,7 @@ namespace Project_Manegement_System___KMC
             "Commissioner",
             "Council"});
             this.txtPermission.ItemsAppearance.Parent = this.txtPermission;
-            this.txtPermission.Location = new System.Drawing.Point(14, 399);
+            this.txtPermission.Location = new System.Drawing.Point(14, 373);
             this.txtPermission.Name = "txtPermission";
             this.txtPermission.ShadowDecoration.Parent = this.txtPermission;
             this.txtPermission.Size = new System.Drawing.Size(357, 36);
@@ -513,7 +477,7 @@ namespace Project_Manegement_System___KMC
             "Tenderer",
             "Special Projects"});
             this.txtMOE.ItemsAppearance.Parent = this.txtMOE;
-            this.txtMOE.Location = new System.Drawing.Point(379, 399);
+            this.txtMOE.Location = new System.Drawing.Point(379, 373);
             this.txtMOE.Name = "txtMOE";
             this.txtMOE.ShadowDecoration.Parent = this.txtMOE;
             this.txtMOE.Size = new System.Drawing.Size(357, 36);
@@ -522,15 +486,13 @@ namespace Project_Manegement_System___KMC
             // DragControl
             // 
             this.DragControl.ContainerControl = this;
-            this.DragControl.TargetControl = this.panel1;
             // 
             // EditDataCustomize
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(748, 507);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(748, 489);
             this.Controls.Add(this.txtMOE);
             this.Controls.Add(this.txtPermission);
             this.Controls.Add(this.lblMethordofExecution);
@@ -552,15 +514,15 @@ namespace Project_Manegement_System___KMC
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtProjectID);
             this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditDataCustomize";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Project Data Customize";
             this.Load += new System.EventHandler(this.EditDataCustomize_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -568,10 +530,6 @@ namespace Project_Manegement_System___KMC
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnOK;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;

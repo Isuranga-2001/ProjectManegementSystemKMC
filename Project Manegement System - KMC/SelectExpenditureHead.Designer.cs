@@ -33,6 +33,7 @@ namespace Project_Manegement_System___KMC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectExpenditureHead));
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -96,23 +97,27 @@ namespace Project_Manegement_System___KMC
             // 
             this.EHDataGridView.AllowUserToAddRows = false;
             this.EHDataGridView.AllowUserToDeleteRows = false;
+            this.EHDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.EHDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.EHDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EHDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.EHDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EHDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.EHDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.EHDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.EHDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.EHDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.EHDataGridView.ColumnHeadersHeight = 30;
-            this.EHDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.EHDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EHID,
             this.EH_Main,
@@ -136,7 +141,15 @@ namespace Project_Manegement_System___KMC
             this.EHDataGridView.Location = new System.Drawing.Point(0, 30);
             this.EHDataGridView.MultiSelect = false;
             this.EHDataGridView.Name = "EHDataGridView";
-            this.EHDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.EHDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EHDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.EHDataGridView.RowHeadersVisible = false;
             this.EHDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.EHDataGridView.RowTemplate.Height = 25;
@@ -145,17 +158,17 @@ namespace Project_Manegement_System___KMC
             this.EHDataGridView.TabIndex = 1;
             this.EHDataGridView.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Teal;
             this.EHDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
-            this.EHDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.EHDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.EHDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.EHDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.EHDataGridView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EHDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.EHDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            this.EHDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.EHDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.EHDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.EHDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.EHDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.EHDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.EHDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.EHDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.EHDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.EHDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.EHDataGridView.ThemeStyle.HeaderStyle.Height = 30;
             this.EHDataGridView.ThemeStyle.ReadOnly = false;
             this.EHDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
@@ -222,6 +235,7 @@ namespace Project_Manegement_System___KMC
             this.btnAddNew.BorderThickness = 2;
             this.btnAddNew.CheckedState.Parent = this.btnAddNew;
             this.btnAddNew.CustomImages.Parent = this.btnAddNew;
+            this.btnAddNew.DisabledState.Parent = this.btnAddNew;
             this.btnAddNew.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnAddNew.ForeColor = System.Drawing.Color.Teal;
@@ -243,6 +257,7 @@ namespace Project_Manegement_System___KMC
             this.btnOK.BorderRadius = 12;
             this.btnOK.CheckedState.Parent = this.btnOK;
             this.btnOK.CustomImages.Parent = this.btnOK;
+            this.btnOK.DisabledState.Parent = this.btnOK;
             this.btnOK.FillColor = System.Drawing.Color.Teal;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOK.ForeColor = System.Drawing.Color.White;

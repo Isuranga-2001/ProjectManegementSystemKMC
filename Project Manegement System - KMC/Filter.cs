@@ -450,9 +450,16 @@ namespace Project_Manegement_System___KMC
 
         private void btnEditData_Click(object sender, EventArgs e)
         {
-            EditData form = new EditData();
-            form.Show();
-            this.Hide();
+            AddNewTableMode form = new AddNewTableMode();
+            form.ShowDialog();
+
+            if (form.NavigateToProgress)
+            {
+                Progress SubForm = new Progress();
+                SubForm.txtProjectID.Text = form.SelectedProjectID;
+                SubForm.Show();
+                this.Close();
+            }
         }
 
         private void BtnClose_Click(object sender, EventArgs e)

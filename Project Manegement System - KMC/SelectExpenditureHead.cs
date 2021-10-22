@@ -39,7 +39,10 @@ namespace Project_Manegement_System___KMC
 
         private void EHDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Properties.Settings.Default.SelectedEHID = EHDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+            if (e.RowIndex > 0)
+            {
+                Properties.Settings.Default.SelectedEHID = EHDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
         }
 
         private void btnOK_Click(object sender, EventArgs e)

@@ -9,7 +9,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="DatabaseLocation" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\user\source\repos\Projects\C# Programming Projects\My Projects\ProjectManegementSystemKMC\Project Manegement System KMC Water\ProjectMnagementSystemWaterDB.mdf</Value>
+      <Value Profile="(Default)">|DataDirectory|\ProjectMnagementSystemWaterDB.mdf</Value>
     </Setting>
     <Setting Name="SelectedEHID" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

@@ -33,6 +33,7 @@ namespace Project_Manegement_System___KMC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilteredProjectDetails));
             this.PanelTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -147,6 +148,7 @@ namespace Project_Manegement_System___KMC
             this.btnExport.BorderThickness = 2;
             this.btnExport.CheckedState.Parent = this.btnExport;
             this.btnExport.CustomImages.Parent = this.btnExport;
+            this.btnExport.DisabledState.Parent = this.btnExport;
             this.btnExport.FillColor = System.Drawing.Color.Teal;
             this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnExport.ForeColor = System.Drawing.Color.White;
@@ -170,6 +172,7 @@ namespace Project_Manegement_System___KMC
             this.btnOpen.BorderThickness = 2;
             this.btnOpen.CheckedState.Parent = this.btnOpen;
             this.btnOpen.CustomImages.Parent = this.btnOpen;
+            this.btnOpen.DisabledState.Parent = this.btnOpen;
             this.btnOpen.FillColor = System.Drawing.Color.Teal;
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnOpen.ForeColor = System.Drawing.Color.White;
@@ -211,17 +214,23 @@ namespace Project_Manegement_System___KMC
             // 
             // TableResults
             // 
+            this.TableResults.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.TableResults.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TableResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TableResults.BackgroundColor = System.Drawing.Color.White;
             this.TableResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TableResults.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.TableResults.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.TableResults.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.TableResults.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -251,20 +260,29 @@ namespace Project_Manegement_System___KMC
             this.TableResults.GridColor = System.Drawing.Color.LightSeaGreen;
             this.TableResults.Location = new System.Drawing.Point(7, 7);
             this.TableResults.Name = "TableResults";
+            this.TableResults.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TableResults.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TableResults.RowHeadersVisible = false;
             this.TableResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TableResults.Size = new System.Drawing.Size(1195, 542);
             this.TableResults.TabIndex = 154;
             this.TableResults.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Teal;
             this.TableResults.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.LightBlue;
-            this.TableResults.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.TableResults.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.TableResults.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.TableResults.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.TableResults.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableResults.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.TableResults.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            this.TableResults.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.TableResults.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.TableResults.ThemeStyle.GridColor = System.Drawing.Color.LightSeaGreen;
             this.TableResults.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Teal;
-            this.TableResults.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.TableResults.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.TableResults.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TableResults.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.TableResults.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
@@ -356,6 +374,7 @@ namespace Project_Manegement_System___KMC
             this.btnGoBack.CheckedState.ForeColor = System.Drawing.Color.Teal;
             this.btnGoBack.CheckedState.Parent = this.btnGoBack;
             this.btnGoBack.CustomImages.Parent = this.btnGoBack;
+            this.btnGoBack.DisabledState.Parent = this.btnGoBack;
             this.btnGoBack.FillColor = System.Drawing.Color.Transparent;
             this.btnGoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnGoBack.ForeColor = System.Drawing.Color.Teal;
@@ -392,6 +411,7 @@ namespace Project_Manegement_System___KMC
             this.btnFilters.CheckedState.ForeColor = System.Drawing.Color.Teal;
             this.btnFilters.CheckedState.Parent = this.btnFilters;
             this.btnFilters.CustomImages.Parent = this.btnFilters;
+            this.btnFilters.DisabledState.Parent = this.btnFilters;
             this.btnFilters.FillColor = System.Drawing.Color.White;
             this.btnFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnFilters.ForeColor = System.Drawing.Color.Teal;
@@ -495,6 +515,7 @@ namespace Project_Manegement_System___KMC
             this.btnTranslate.CheckedState.ForeColor = System.Drawing.Color.Teal;
             this.btnTranslate.CheckedState.Parent = this.btnTranslate;
             this.btnTranslate.CustomImages.Parent = this.btnTranslate;
+            this.btnTranslate.DisabledState.Parent = this.btnTranslate;
             this.btnTranslate.FillColor = System.Drawing.Color.White;
             this.btnTranslate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnTranslate.ForeColor = System.Drawing.Color.Teal;

@@ -109,7 +109,7 @@ namespace Project_Manegement_System___KMC
                 conn.Close();
                 return true;
             }
-            catch
+            catch (Exception e)
             {
                 conn.Close();
                 return false;
@@ -149,6 +149,27 @@ namespace Project_Manegement_System___KMC
             }
             foreach (DataRow dRow in duplicateList)
                 dataTable.Rows.Remove(dRow);
+        }
+
+        public bool ExecuteSQL(string query)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = '"
+                + Properties.Settings.Default.DatabaseLocation + "'; Integrated Security = True");
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader SQL = cmd.ExecuteReader();
+
+                conn.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error found!" + e.Message, "Somthing Went Wrong!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
     } 
 }
